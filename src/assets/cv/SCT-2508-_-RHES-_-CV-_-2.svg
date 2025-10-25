@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="793.33" height="1122.7" version="1.1" viewBox="0 0 793.33 1122.7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <clipPath id="clipPath1">
+   <path d="m0 0h446.25v563.38h-446.25z"/>
+  </clipPath>
+  <clipPath id="clipPath2">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath3">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath4">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath5">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath6">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath7">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath8">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath9">
+   <path d="m0 0h597v579h-597z"/>
+  </clipPath>
+  <clipPath id="clipPath10">
+   <path transform="translate(-372.25 -412.25)" d="m367 399h39v20h-39z"/>
+  </clipPath>
+  <clipPath id="clipPath11">
+   <path transform="translate(-365.75 -423.5)" d="m360 410h46v20h-46z"/>
+  </clipPath>
+  <clipPath id="clipPath12">
+   <path transform="translate(-372.25 -439.25)" d="m367 426h39v20h-39z"/>
+  </clipPath>
+  <clipPath id="clipPath13">
+   <path transform="translate(-362.75 -450.5)" d="m357 437h49v20h-49z"/>
+  </clipPath>
+  <clipPath id="clipPath14">
+   <path transform="translate(-372.25 -527.5)" d="m367 514h39v20h-39z"/>
+  </clipPath>
+  <clipPath id="clipPath15">
+   <path transform="translate(-315.91 -538.75)" d="m310 525h51v20h-51z"/>
+  </clipPath>
+  <clipPath id="clipPath16">
+   <path transform="translate(-357.25 -538.75)" d="m349 525h18v20h-18z"/>
+  </clipPath>
+  <clipPath id="clipPath17">
+   <path transform="translate(-362.75 -538.75)" d="m357 525h49v20h-49z"/>
+  </clipPath>
+  <clipPath id="clipPath18">
+   <path transform="translate(-163.61 -17.375)" d="m158-3h63v28h-63z"/>
+  </clipPath>
+  <clipPath id="clipPath19">
+   <path transform="translate(-219.35 -17.375)" d="m214-3h75v28h-75z"/>
+  </clipPath>
+  <clipPath id="clipPath20">
+   <path transform="translate(-166.9 -77.25)" d="m161 63h125v22h-125z"/>
+  </clipPath>
+  <clipPath id="clipPath21">
+   <path transform="translate(-46.5 -94.375)" d="m41 81h317v20h-317z"/>
+  </clipPath>
+  <clipPath id="clipPath22">
+   <path transform="translate(-46.5 -105.62)" d="m41 92h355v20h-355z"/>
+  </clipPath>
+  <clipPath id="clipPath23">
+   <path transform="translate(-46.5 -116.88)" d="m41 103h330v20h-330z"/>
+  </clipPath>
+  <clipPath id="clipPath24">
+   <path transform="translate(-197.76 -138.25)" d="m192 124h63v22h-63z"/>
+  </clipPath>
+  <clipPath id="clipPath25">
+   <path transform="translate(-70.5 -155.38)" d="m65 142h86v20h-86z"/>
+  </clipPath>
+  <mask id="mask25" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath26">
+   <path transform="scale(.16667)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath27">
+   <path transform="translate(-233.11 -155.38)" d="m228 142h119v20h-119z"/>
+  </clipPath>
+  <mask id="mask27" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath28">
+   <path transform="matrix(.16667 0 0 .16667 -.00017374 4.1688e-7)" d="m0.00104 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath29">
+   <path transform="translate(-70.5 -168.75)" d="m65 155h117v20h-117z"/>
+  </clipPath>
+  <mask id="mask29" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath30">
+   <path transform="scale(.16667)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath31">
+   <path transform="translate(-233.11 -168.75)" d="m228 155h126v20h-126z"/>
+  </clipPath>
+  <mask id="mask31" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath32">
+   <path transform="matrix(.16667 0 0 .16667 -.00017331 -2.7641e-7)" d="m0.00104 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath33">
+   <path transform="translate(-70.5 -182.12)" d="m65 169h142v20h-142z"/>
+  </clipPath>
+  <mask id="mask33" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath34">
+   <path transform="scale(.16667)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath35">
+   <path transform="translate(-233.11 -182.12)" d="m228 169h87v20h-87z"/>
+  </clipPath>
+  <mask id="mask35" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath36">
+   <path transform="matrix(.16667 0 0 .16667 -.00017287 4.2037e-7)" d="m0.00104 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath37">
+   <path transform="translate(-151.31 -205.62)" d="m146 191h155v22h-155z"/>
+  </clipPath>
+  <clipPath id="clipPath38">
+   <path transform="translate(-46.5 -222.75)" d="m41 209h69v20h-69z"/>
+  </clipPath>
+  <clipPath id="clipPath39">
+   <path transform="translate(-46.5 -234)" d="m41 221h360v19h-360z"/>
+  </clipPath>
+  <clipPath id="clipPath40">
+   <path transform="translate(-46.5 -245.25)" d="m41 232h62v20h-62z"/>
+  </clipPath>
+  <clipPath id="clipPath41">
+   <path transform="translate(-46.5 -267.75)" d="m41 254h112v20h-112z"/>
+  </clipPath>
+  <clipPath id="clipPath42">
+   <path transform="translate(-46.5 -279)" d="m41 266h353v19h-353z"/>
+  </clipPath>
+  <clipPath id="clipPath43">
+   <path transform="translate(-46.5 -301.5)" d="m41 288h89v20h-89z"/>
+  </clipPath>
+  <clipPath id="clipPath44">
+   <path transform="translate(-46.5 -312.75)" d="m41 299h353v20h-353z"/>
+  </clipPath>
+  <clipPath id="clipPath45">
+   <path transform="translate(-46.5 -324)" d="m41 311h251v19h-251z"/>
+  </clipPath>
+  <clipPath id="clipPath46">
+   <path transform="translate(-202.35 -345.37)" d="m197 331h53v22h-53z"/>
+  </clipPath>
+  <clipPath id="clipPath47">
+   <path transform="translate(-70.5 -362.5)" d="m65 349h73v20h-73z"/>
+  </clipPath>
+  <mask id="mask47" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath48">
+   <path transform="scale(.16667)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath49">
+   <path transform="translate(-70.5 -373.75)" d="m65 360h52v20h-52z"/>
+  </clipPath>
+  <mask id="mask49" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath50">
+   <path transform="scale(.16667)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath51">
+   <path transform="translate(-164.45 -395.12)" d="m159 381h129v22h-129z"/>
+  </clipPath>
+  <clipPath id="clipPath52">
+   <path transform="translate(-46.5 -412.25)" d="m41 399h157v20h-157z"/>
+  </clipPath>
+  <clipPath id="clipPath53">
+   <path transform="translate(-46.5 -423.5)" d="m41 410h178v20h-178z"/>
+  </clipPath>
+  <clipPath id="clipPath54">
+   <path transform="translate(-46.5 -439.25)" d="m41 426h85v20h-85z"/>
+  </clipPath>
+  <clipPath id="clipPath55">
+   <path transform="translate(-46.5 -450.5)" d="m41 437h273v20h-273z"/>
+  </clipPath>
+  <clipPath id="clipPath56">
+   <path transform="translate(-189.91 -471.87)" d="m184 457h79v22h-79z"/>
+  </clipPath>
+  <clipPath id="clipPath57">
+   <path transform="translate(-46.5 -489)" d="m41 476h269v19h-269z"/>
+  </clipPath>
+  <clipPath id="clipPath58">
+   <path transform="translate(-192.26 -510.37)" d="m187 496h73v22h-73z"/>
+  </clipPath>
+  <clipPath id="clipPath59">
+   <path transform="translate(-46.5 -527.5)" d="m41 514h284v20h-284z"/>
+  </clipPath>
+  <clipPath id="clipPath60">
+   <path transform="translate(-46.5 -538.75)" d="m41 525h152v20h-152z"/>
+  </clipPath>
+  <clipPath id="clipPath61">
+   <path transform="translate(-70.5 -550)" d="m65 537h340v19h-340z"/>
+  </clipPath>
+  <clipPath id="clipPath62">
+   <path transform="translate(-70.5 -561.25)" d="m65 548h240v20h-240z"/>
+  </clipPath>
+  <mask id="mask62" x="0" y="0" width="1" height="1" maskUnits="userSpaceOnUse">
+   <image width="1" height="1" image-rendering="optimizeSpeed" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAAAAADFp7CUAAAAAXNCSVQI5gpbmQAAACNJREFUCJljYIACre03ohgYGPb+//+Hn4nhL0TQ4OrbTJgCAMhiCTR536ZFAAAAAElFTkSuQmCC"/>
+  </mask>
+  <clipPath id="clipPath63">
+   <path transform="matrix(.16667 0 0 .16667 0 -3.3062e-6)" d="m0 0h6v6h-6z"/>
+  </clipPath>
+  <clipPath id="clipPath64">
+   <path transform="translate(-209.38 -33.375)" d="m204 20h39v20h-39z"/>
+  </clipPath>
+  <clipPath id="clipPath65">
+   <path transform="translate(-181.05 -44.625)" d="m176 31h96v20h-96z"/>
+  </clipPath>
+  <clipPath id="clipPath66">
+   <path transform="translate(-196.88 -55.875)" d="m191 42h65v20h-65z"/>
+  </clipPath>
+ </defs>
+ <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m0 0h446.25v563.38h-446.25z" clip-path="url(#clipPath1)" fill="#fff"/>
+ <g fill="none" stroke="#000" stroke-miterlimit="10">
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 23.5h-353" clip-path="url(#clipPath2)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 82.5h-353" clip-path="url(#clipPath3)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 143.5h-353" clip-path="url(#clipPath4)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 210.5h-353" clip-path="url(#clipPath5)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 350.5h-353" clip-path="url(#clipPath6)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 400.5h-353" clip-path="url(#clipPath7)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 477.5h-353" clip-path="url(#clipPath8)"/>
+  <path transform="matrix(1.7778 0 0 1.7778 0 37.336)" d="m400 515.5h-353" clip-path="url(#clipPath9)"/>
+ </g>
+ <text transform="matrix(1.7778 0 0 1.7778 661.78 770.22)" clip-path="url(#clipPath10)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 20.502001 22.5" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Madrid</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 650.22 790.22)" clip-path="url(#clipPath11)" xml:space="preserve"><tspan x="0 1.998 7.0019999 9 11.493 13.986 18.99 23.993999 28.997999" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">jul. 2023</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 661.78 818.22)" clip-path="url(#clipPath12)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 20.502001 22.5" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Madrid</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 644.89 838.22)" clip-path="url(#clipPath13)" xml:space="preserve"><tspan x="0 1.998 7.0019999 12.006 14.499 16.992001 21.996 27 32.004002" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">jun. 2022</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 661.78 975.11)" clip-path="url(#clipPath14)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 20.502001 22.5" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Madrid</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 561.62 995.11)" clip-path="url(#clipPath15)" xml:space="preserve"><tspan x="0 5.0040002 9.9989996 13.842 16.334999 18.827999 23.832001 28.836 33.84" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">nov. 2022</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 635.11 995.11)" clip-path="url(#clipPath16)" xml:space="preserve"><tspan x="0" y="0" fill="#000000" font-family="'Times New Roman'" font-size="9px">‐</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 644.89 995.11)" clip-path="url(#clipPath17)" xml:space="preserve"><tspan x="0 1.998 7.0019999 12.006 14.499 16.992001 21.996 27 32.004002" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">jun. 2023</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 290.87 68.225)" clip-path="url(#clipPath18)" xml:space="preserve"><tspan x="0 12.274 27.403999 36.855999 41.564999" y="0" fill="#ac7bae" font-family="Arial" font-size="17px" font-weight="700">Amaia</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 389.95 68.225)" clip-path="url(#clipPath19)" xml:space="preserve"><tspan x="0 12.274 21.743 26.452 36.821999 43.452 52.903999" y="0" fill="#ac7bae" font-family="Arial" font-size="17px" font-weight="700">Celdrán</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 296.71 174.67)" clip-path="url(#clipPath20)" xml:space="preserve"><tspan x="0 7.9419999 14.069 20.184999 26.906 36.685001 42.800999 49.521999 52.569 59.895 64.184998 70.894997 74.569 80.684998 86.801003 89.859001 96.569 103.279 109.406" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Resumen Profesional</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 82.666 205.11)" clip-path="url(#clipPath21)" xml:space="preserve"><tspan x="0 5.4899998 10.494 14.994 19.997999 21.996 26.496 31.5 33.993 38.997002 44.000999 46.493999 48.492001 53.495998 58.5 63.504002 66.500999 71.504997 73.998001 79.001999 81.999001 83.997002 89.000999 91.494003 94.490997 99.495003 103.995 108.999 114.003 119.007 123.507 128.511 133.515 135.513 140.517 143.00999 147.50999 150.00301 153 154.998 160.002 165.006 168.00301 173.007 177.507 182.511 185.004 187.49699 191.99699 197.00101 202.005 204.498 209.502 211.995 216.99899 222.00301 226.50301 228.50101 233.505 238.509 241.002 248.49899 253.50301 255.996 257.99399 262.49399 267.49799 269.496 274.5 279 284.004 286.49701 291.50101 293.99399 295.992 300.996" y="0" fill="#000000" font-family="Arial" font-size="9px">Técnico de laboratorio responsable y rigurosa, con atención meticulosa a los</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 82.666 225.11)" clip-path="url(#clipPath22)" xml:space="preserve"><tspan x="0 5.0040002 10.008 12.501 17.504999 19.503 21.500999 26.504999 31.004999 33.498001 35.991001 41.985001 46.988998 49.986 52.479 54.477001 58.977001 60.974998 65.978996 70.983002 75.483002 77.481003 82.485001 87.498001 89.990997 94.995003 99.999001 102.492 107.496 110.493 115.497 119.997 125.001 129.50101 131.994 136.998 141.498 143.991 148.995 153.99899 161.496 166.5 171.504 173.502 175.995 180.99899 183.996 185.994 190.998 195.498 197.991 202.995 207.99899 210.492 217.989 222.993 227.493 229.491 233.991 238.995 241.48801 245.98801 250.992 258.48901 263.49301 265.98599 270.98999 275.99399 278.991 281.48401 286.48801 288.98099 293.98499 298.98901 300.987 303.48001 308.49301 313.49701 318.50101 320.49899 325.50299 330.50699 333 338.004" y="0" fill="#000000" font-family="Arial" font-size="9px">detalles. Participación en proyectos humanitarios en México como parte del equipo de</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 82.666 245.11)" clip-path="url(#clipPath23)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 19.503 24.003 29.007 33.507 36 40.5 42.498001 47.501999 49.994999 55.485001 58.481998 63.486 68.489998 70.983002 75.987 78.984001 83.987999 88.487999 90.981003 93.473999 99.468002 103.968 108.468 113.472 115.47 120.474 125.478 127.971 132.97501 137.47501 139.968 144.972 149.976 154.98 156.978 158.976 160.974 165.978 170.98199 175.98599 180.99001 185.49001 187.983 192.987 197.991 200.48399 204.98399 209.98801 217.485 222.489 227.493 229.491 233.991 238.995 243.495 245.493 250.49699 255.50101 257.99399 262.49399 264.987 269.487 274.491 276.48901 281.49301 286.49701 291.50101 294.49799 299.50201 304.00201 306 311.004 316.008" y="0" fill="#000000" font-family="Arial" font-size="9px">Médicos sin Fronteras. Excelentes habilidades de comunicación y colaboración.</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 351.58 283.11)" clip-path="url(#clipPath24)" xml:space="preserve"><tspan x="0 7.9530001 14.663 18.337 21.384001 25.058001 31.778999 38.488998 44.616001" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Aptitudes</tspan></text>
+ <text transform="matrix(1.7778 0 0 1.7778 125.33 313.56)" clip-path="url(#clipPath25)" xml:space="preserve"><tspan x="0 4.5 9.5039997 17.000999 22.004999 24.497999 29.502001 34.506001 36.999001 44.495998 49.5 54.504002 59.004002 61.497002 64.494003 69.498001" y="0" fill="#000000" font-family="Arial" font-size="9px">Toma de muestras</tspan></text>
+ <image transform="matrix(8 0 0 8 105.33 305.56)" width="1" height="1" clip-path="url(#clipPath26)" image-rendering="optimizeSpeed" mask="url(#mask25)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7778 0 0 1.7778 414.42 313.56)" clip-path="url(#clipPath27)" xml:space="preserve"><tspan x="0 6.993 11.997 16.497 18.99 20.988001 25.992001 30.996 33.488998 38.493 43.497002 45.990002 50.993999 55.998001 60.498001 65.501999 70.001999 72.495003 77.499001 82.502998 84.996002 90 95.003998 97.497002 102.501" y="0" fill="#000000" font-family="Arial" font-size="9px">Gestión de bases de datos</tspan></text>
+ <image transform="matrix(8 0 0 8 394.42 305.56)" width="1" height="1" clip-path="url(#clipPath28)" image-rendering="optimizeSpeed" mask="url(#mask27)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7778 0 0 1.7778 125.33 337.33)" clip-path="url(#clipPath29)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 19.997999 25.002001 30.006001 31.995001 39.492001 41.490002 46.493999 51.498001 53.991001 58.994999 61.487999 66.491997 71.496002 73.988998 78.992996 83.997002 88.991997 90.989998 95.994003 100.998" y="0" fill="#000000" font-family="Arial" font-size="9px">Mantenimiento de equipos</tspan></text>
+ <image transform="matrix(7.9999 0 0 7.9999 105.33 329.33)" width="1" height="1" clip-path="url(#clipPath30)" image-rendering="optimizeSpeed" mask="url(#mask29)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7778 0 0 1.7778 414.42 337.33)" clip-path="url(#clipPath31)" xml:space="preserve"><tspan x="0 6.4980001 11.502 16.002001 21.006001 28.503 33.498001 38.501999 40.994999 45.999001 50.499001 52.497002 57.500999 62.505001 64.998001 70.001999 74.997002 77.489998 82.494003 85.490997 90.495003 94.995003 99.999001 104.499 109.503" y="0" fill="#000000" font-family="Arial" font-size="9px">Documentación de procesos</tspan></text>
+ <image transform="matrix(7.9999 0 0 7.9999 394.42 329.33)" width="1" height="1" clip-path="url(#clipPath32)" image-rendering="optimizeSpeed" mask="url(#mask31)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7778 0 0 1.7778 125.33 361.11)" clip-path="url(#clipPath33)" xml:space="preserve"><tspan x="0 6.4980001 11.502 16.506001 18.504 23.004 25.497 28.493999 33.498001 35.991001 40.994999 45.999001 48.492001 51.488998 56.493 61.001999 66.005997 68.003998 70.497002 75.500999 80.504997 85.509003 90.009003 92.501999 97.505997 102.51 107.514 109.512 112.005 114.498 116.496 120.996 126" y="0" fill="#000000" font-family="Arial" font-size="9px">Registro de resultados analíticos</tspan></text>
+ <image transform="matrix(7.9999 0 0 7.9999 105.33 353.11)" width="1" height="1" clip-path="url(#clipPath34)" image-rendering="optimizeSpeed" mask="url(#mask33)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7778 0 0 1.7778 414.42 361.11)" clip-path="url(#clipPath35)" xml:space="preserve"><tspan x="0 5.4899998 7.4879999 12.492 16.992001 18.99 23.993999 25.992001 27.99 29.988001 34.992001 39.995998 45 47.493 52.497002 57.500999 60.498001 65.501999 68.499001 70.497002" y="0" fill="#000000" font-family="Arial" font-size="9px">Flexibilidad horaria</tspan></text>
+ <image transform="matrix(7.9999 0 0 7.9999 394.42 353.11)" width="1" height="1" clip-path="url(#clipPath36)" image-rendering="optimizeSpeed" mask="url(#mask35)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7777 0 0 1.7777 269 402.89)" clip-path="url(#clipPath37)" xml:space="preserve"><tspan x="0 7.9419999 14.069 20.184999 26.895 36.674 42.800999 49.511002 52.557999 60.5 66.626999 69.674004 77.615997 83.732002 86.790001 89.836998 93.5 96.546997 102.674 108.79 114.906 117.953 124.674 131.384 137.5" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Resumen De Calificaciones</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 433.33)" clip-path="url(#clipPath38)" xml:space="preserve"><tspan x="0 7.0019999 10.503 16.002001 21.006001 26.496 28.997999 33.498001 38.501999 43.514999 46.007999 51.507" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic" font-weight="700">Organización</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 453.33)" clip-path="url(#clipPath39)" xml:space="preserve"><tspan x="0 6.4980001 11.502 16.506001 18.504 20.502001 22.5 27.504 32.507999 37.512001 40.005001 45.008999 50.013 53.009998 58.014 60.507 65.007004 70.011002 75.014999 78.012001 83.015999 85.014 90.017998 95.030998 98.028 100.521 108.018 113.022 115.02 117.513 119.511 124.515 126.513 131.517 136.017 138.50999 141.00301 146.007 149.004 154.008 159.01199 163.51199 166.005 171.009 176.013 178.506 180.99899 186.00301 189 196.49699 201.50101 203.994 208.998 211.491 213.489 217.989 219.987 224.991 229.995 232.48801 237.492 239.985 242.478 246.978 251.98199 259.479 264.483 266.48099 268.479 273.483 278.487 283.491 288.495 290.98801 295.48801 300.492 305.496 307.99799 309.996 315 319.5 321.99301 326.99701 328.995 333.99899 338.49899 343.50299" y="0" fill="#000000" font-family="Arial" font-size="9px">Habilidad para coordinar múltiples tareas de forma eficiente, cumpliendo con los plazos</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 473.33)" clip-path="url(#clipPath40)" xml:space="preserve"><tspan x="0 5.0040002 9.5039997 11.997 17.000999 21.996 23.993999 28.997999 33.498001 35.495998 40.5 45.504002" y="0" fill="#000000" font-family="Arial" font-size="9px">establecidos</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 513.33)" clip-path="url(#clipPath41)" xml:space="preserve"><tspan x="0 6.0029998 11.016 16.506001 22.004999 25.506001 28.007999 33.498001 38.511002 44.009998 46.502998 51.515999 54.008999 59.507999 63.008999 68.508003 71.504997 77.003998 82.016998 87.507004 90.009003 95.499001" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic" font-weight="700">Seguridad y protocolos</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 533.33)" clip-path="url(#clipPath42)" xml:space="preserve"><tspan x="0 6.4980001 11.502 18.999001 24.003 26.000999 27.999001 35.495998 37.493999 42.498001 47.501999 49.994999 54.999001 57.492001 60.488998 62.487 67.490997 72.495003 75.491997 80.496002 84.996002 90 92.492996 97.497002 102.501 104.994 106.992 111.996 116.496 118.989 123.993 126.99 131.994 134.487 139.491 143.991 148.995 150.993 155.99699 160.49699 162.99001 167.994 172.998 175.995 180.99899 183.492 188.496 193.5 196.49699 201.50101 206.505 208.998 210.996 215.496 220.5 223.49699 225.99001 230.994 235.998 238.491 243.495 248.49899 250.992 255.996 258.99301 263.99701 269.00101 271.49399 276.49799 281.50201 283.995 286.48801 289.48499 294.48901 299.49301 304.49701 306.495 311.49899 313.992 318.492 323.496 328.5 333.504 336.50101" y="0" fill="#000000" font-family="Arial" font-size="9px">Cumplimiento riguroso de los protocolos para garantizar un entorno de trabajo seguro</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 573.33)" clip-path="url(#clipPath43)" xml:space="preserve"><tspan x="0 5.4899998 8.9820004 13.986 19.466999 24.471001 26.955 32.436001 34.929001 39.924 45.414001 47.897999 52.902 58.382999 63.863998 66.357002 71.837997" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic" font-weight="700">Trabajo en equipo</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 593.33)" clip-path="url(#clipPath44)" xml:space="preserve"><tspan x="0 6.4980001 11.502 16.506001 18.504 20.502001 22.5 27.504 32.507999 37.512001 40.005001 45.008999 50.013 53.009998 58.014 60.507 62.991001 65.987999 70.991997 75.996002 81 82.998001 88.001999 90.999001 93.491997 98.496002 103.5 105.993 113.49 118.494 123.498 128.502 131.49899 136.50301 138.996 143.496 148.5 153.504 156.50101 161.505 163.50301 168.507 173.502 178.506 183.50999 186.00301 190.50301 195.507 200.511 203.004 208.008 210.006 212.49899 217.50301 222.507 225.504 230.004 235.008 240.01199 245.01601 247.01401 249.507 257.004 262.008 267.01199 269.01001 273.51001 278.51401 280.99799 283.491 288.495 292.995 297.99899 303.00299 307.50299 309.50101 314.505 316.50299 324 329.004 334.008 336.50101" y="0" fill="#000000" font-family="Arial" font-size="9px">Habilidad para trabajar de manera coordinada con el personal médico, especialmente</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 613.33)" clip-path="url(#clipPath45)" xml:space="preserve"><tspan x="0 5.0040002 10.008 12.501 17.000999 18.999001 21.492001 26.496 31.5 36 37.998001 42.993 47.997002 53.000999 57.500999 59.993999 64.998001 70.001999 75.005997 77.499001 80.496002 85.5 90.503998 95.508003 97.505997 102.51 105.507 110.511 115.515 118.008 122.499 127.503 135 140.004 145.008 147.006 151.506 156.50999 161.00999 163.008 168.01199 173.01601 175.509 178.506 183.50999 188.51401 190.51199 195.51601 200.52 203.004 207.504 209.99699 215.00101 217.998 223.002 227.502 229.5 234" y="0" fill="#000000" font-family="Arial" font-size="9px">en situaciones que requieren comunicación rápida y precisa</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 359.73 651.33)" clip-path="url(#clipPath46)" xml:space="preserve"><tspan x="0 3.0580001 9.7679996 12.826 19.535999 29.315001 35.442001" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Idiomas</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 125.33 681.77)" clip-path="url(#clipPath47)" xml:space="preserve"><tspan x="0 6.0029998 10.503 15.507 20.511 25.514999 30.518999 32.516998 35.009998 37.502998 42.507 47.511002 50.004002 52.001999 56.501999" y="0" fill="#000000" font-family="Arial" font-size="9px">Español, nativo</tspan></text>
+ <image transform="matrix(7.9999 0 0 7.9999 105.33 673.77)" width="1" height="1" clip-path="url(#clipPath48)" image-rendering="optimizeSpeed" mask="url(#mask47)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7777 0 0 1.7777 125.33 701.77)" clip-path="url(#clipPath49)" xml:space="preserve"><tspan x="0 2.5020001 7.506 12.51 14.508 19.511999 24.011999 26.514 29.007 35.000999" y="0" fill="#000000" font-family="Arial" font-size="9px">Inglés, B2</tspan></text>
+ <image transform="matrix(7.9998 0 0 7.9998 105.33 693.77)" width="1" height="1" clip-path="url(#clipPath50)" image-rendering="optimizeSpeed" mask="url(#mask49)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7777 0 0 1.7777 292.35 739.76)" clip-path="url(#clipPath51)" xml:space="preserve"><tspan x="0 6.7210002 13.431 17.709999 27.5 33.616001 39.731998 42.778999 49.5 56.209999 59.257 67.198997 73.325996 79.442001 86.152 92.278999 102.058 105.105 111.221" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Formación Académica</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 770.21)" clip-path="url(#clipPath52)" xml:space="preserve"><tspan x="0 6.4980001 11.502 13.5 18 23.004 26.000999 30.500999 32.499001 37.502998 42.507 47.511002 50.004002 56.501999 61.506001 69.002998 74.007004 76.004997 81.009003 83.501999 88.505997 93.500999 98.000999 103.005 105.498 110.502 115.506 117.999 125.496 130.5 135.504 138.50101 140.49899" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Universidad Complutense de Madrid</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 790.21)" clip-path="url(#clipPath53)" xml:space="preserve"><tspan x="0 6.993 9.9899998 14.994 19.997999 25.002001 27.495001 32.499001 37.502998 39.995998 45 46.998001 52.001999 57.006001 62.009998 64.502998 72 73.998001 78.498001 83.501999 85.995003 90.495003 92.987999 97.991997 99.989998 104.994 106.992 111.996 117 119.493 124.497 126.99 134.487 139.491 141.489 146.493 150.993 155.99699 157.995 162.99899" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Grado en bioquímica y biología molecular</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 818.21)" clip-path="url(#clipPath54)" xml:space="preserve"><tspan x="0 2.4749999 8.4510002 14.418 16.893 21.879 26.856001 31.841999 36.827999 39.293999 44.279999 49.265999 51.731998 57.708 62.694 67.68" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">IES Lope de Vega</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 838.21)" clip-path="url(#clipPath55)" xml:space="preserve"><tspan x="0 5.4899998 10.494 14.994 19.997999 21.996 26.496 31.5 33.993 38.501999 43.506001 48.509998 53.514 56.511002 58.508999 63.513 66.510002 69.002998 74.007004 79.011002 81.503998 83.501999 88.505997 93.510002 98.514 101.511 106.515 109.008 114.012 117.009 119.007 124.011 126.504 131.508 136.51199 139.005 144.009 149.013 154.017 156.015 158.013 162.513 164.511 169.011 171.504 176.004 178.49699 183.50101 188.505 190.998 195.498 200.502 205.506 207.99899 210.996 216 217.998 220.491 225.495 230.49899 232.992 237.492 242.496 244.494 246.492 251.496 256.5" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Técnico superior en laboratorio de análisis y de control de calidad</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 337.61 876.21)" clip-path="url(#clipPath56)" xml:space="preserve"><tspan x="0 6.5339999 13.244 16.302 23.011999 29.733 33.396 39.522999 43.801998 46.860001 52.976002 59.696999" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Voluntariado</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 906.65)" clip-path="url(#clipPath57)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 19.503 24.003 29.016001 33.515999 36.008999 40.508999 42.507 47.511002 50.004002 55.493999 58.491001 63.494999 68.499001 71.000999 76.004997 79.001999 84.005997 88.505997 90.999001 93.491997 99.989998 104.994 109.998 111.996 117.009 124.506 129.50999 132.00301 134.496 140.994 145.998 151.002 156.006 161.00999 164.007 169.02 173.52 176.013 178.506 180.504 185.508 187.506 189.99899 192.492 197.496 202.5 207.513 212.517 215.00999 218.007 220.5 225.504 230.004 232.49699 234.99001 237.483 242.487 247.5 252.504" y="0" fill="#000000" font-family="Arial" font-size="9px">Médicos sin Fronteras, Choloma, Honduras, jul. 2023 - oct. 2024</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 341.79 944.65)" clip-path="url(#clipPath58)" xml:space="preserve"><tspan x="0 7.3369999 13.453 20.163 26.278999 30.569 33.616001 39.731998 46.442001 52.569 55.616001" y="0" fill="#ac7bae" font-family="Arial" font-size="11px" font-weight="700">Experiencia</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 975.09)" clip-path="url(#clipPath59)" xml:space="preserve"><tspan x="0 6.4980001 8.4960003 10.989 15.993 17.990999 22.490999 27.495001 29.988001 32.480999 34.973999 39.978001 42.471001 45.467999 50.472 53.459999 58.464001 63.467999 66.464996 71.469002 78.966003 83.970001 86.462997 91.467003 96.471001 98.963997 104.958 109.458 114.462 119.466 124.47 128.97 131.463 136.467 141.47099 143.964 149.95799 152.955 157.959 162.459 164.952 166.94099 171.44099 176.44501 180.94501 183.438 188.442 193.446 195.939 200.94299 205.94701 210.951 215.955 218.952 223.95599 226.44901 231.453 234.45 236.448 241.452 243.94501 249.939 255.933 262.431 268.92899" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Clínica Ito (programa de Ayudas de Prácticas de Laboratorio AECC)</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 82.665 995.09)" clip-path="url(#clipPath60)" xml:space="preserve"><tspan x="0 5.4899998 10.494 14.994 19.997999 21.996 26.496 31.5 33.993 38.997002 44.000999 46.493999 48.492001 53.495998 58.5 63.504002 66.500999 71.504997 73.998001 79.001999 81.999001 84.005997 89.010002 91.502998 96.507004 101.511 104.004 109.008 112.005 117.009 121.509 124.002 126 130.5 135.504" y="0" fill="#000000" font-family="Arial" font-size="9px" font-style="italic">Técnico de laboratorio en prácticas</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 125.33 1015.1)" clip-path="url(#clipPath61)" xml:space="preserve"><tspan x="0 6.0029998 8.0010004 13.005 17.504999 22.509001 27.009001 29.007 34.011002 39.014999 41.507999 46.512001 51.515999 54.008999 59.013 62.009998 67.014 72.017998 77.022003 82.026001 86.526001 89.018997 94.023003 99.027 101.52 103.518 108.522 113.526 118.53 121.527 126.531 129.024 134.028 137.02499 139.02299 144.02699 146.52 149.013 152.00999 157.01401 161.51401 166.51801 171.522 173.52 175.51801 180.522 185.022 187.02 192.024 197.028 199.521 204.52499 209.52901 212.022 217.026 222.03 224.52299 229.52699 234.02699 236.52 239.013 241.506 246.50999 254.007 259.01099 261.504 266.508 271.51199 274.005 281.50201 286.50601 291.51001 296.01001 298.50299 301.5 306.504 311.004 313.49701 317.99701 323.00101" y="0" fill="#000000" font-family="Arial" font-size="9px">Ejecución de pruebas de laboratorio, recopilación de datos, toma de muestras con</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 125.33 1035.1)" clip-path="url(#clipPath62)" xml:space="preserve"><tspan x="0 4.5 9.5039997 11.997 16.497 21.500999 24.497999 27.495001 32.499001 36.999001 42.002998 47.007 52.011002 57.014999 59.013 64.016998 69.021004 71.514 76.517998 79.011002 84.014999 86.508003 88.505997 93.510002 98.514 103.509 106.002 111.006 116.01 121.014 123.507 126 130.5 132.993 137.99699 140.994 145.998 150.498 155.502 160.002 165.006 172.50301 174.50101 179.505 184.509 187.002 192.006 194.49899 199.50301 204.507 207 212.004 216.504 218.99699 224.00101" y="0" fill="#000000" font-family="Arial" font-size="9px">su correspondiente etiquetado, y procesamiento de estas</tspan></text>
+ <image transform="matrix(7.9998 0 0 7.9998 105.33 1007.1)" width="1" height="1" clip-path="url(#clipPath63)" image-rendering="optimizeSpeed" mask="url(#mask62)" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAABHNCSVQICAgIfAhkiAAAACxJREFUCJltjTEKADEAg/To/79sh5sKyRgFrWLsAKjPWfEtW90A2KD6G6t/ARPBDQnShPxkAAAAAElFTkSuQmCC"/>
+ <text transform="matrix(1.7777 0 0 1.7777 372.21 96.668)" clip-path="url(#clipPath64)" xml:space="preserve"><tspan x="0 7.4970002 12.501 17.504999 20.502001 22.5" y="0" fill="#000000" font-family="Arial" font-size="9px">Madrid</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 321.86 116.67)" clip-path="url(#clipPath65)" xml:space="preserve"><tspan x="0 5.0040002 7.0019999 12.006 19.503 24.507 26.504999 31.5 40.634998 45.639 47.637001 52.640999 60.138 65.141998 67.139999 72.143997 74.637001 79.640999" y="0" fill="#000000" font-family="Arial" font-size="9px">ejemplo@ejemplo.es</tspan></text>
+ <text transform="matrix(1.7777 0 0 1.7777 349.99 136.67)" clip-path="url(#clipPath66)" xml:space="preserve"><tspan x="0 5.0040002 10.008 15.012 17.504999 22.509001 27.504 29.997 35.000999 40.005001 42.498001 47.501999" y="0" fill="#000000" font-family="Arial" font-size="9px">555 55 55 55</tspan></text>
+</svg>

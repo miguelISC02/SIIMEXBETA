@@ -1,0 +1,221 @@
+<header class="mb-3">
+      <h1 class="text-borgona mb-1">Trayectoria educativa</h1>
+      <p class="muted-small mb-0">Administra tus certificaciones, cursos, herramientas, idiomas y logros. Las pestañas permiten gestionar cada sección rápidamente.</p>
+    </header>
+
+    <!-- Card principal -->
+    <section class="card border-borgona" aria-labelledby="trayTitle">
+      <div class="card-header bg-light d-flex justify-content-between align-items-center">
+        <h2 id="trayTitle" class="mb-0 text-borgona">Trayectoria educativa</h2>
+        <small class="muted-small">Actualiza tu perfil académico y profesional</small>
+      </div>
+
+      <div class="card-body">
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-3" id="trayNav" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="certs-tab" data-bs-toggle="tab" data-bs-target="#certs" type="button" role="tab" aria-controls="certs" aria-selected="true">Certificaciones</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="cursos-tab" data-bs-toggle="tab" data-bs-target="#cursos" type="button" role="tab" aria-controls="cursos" aria-selected="false">Cursos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="herramientas-tab" data-bs-toggle="tab" data-bs-target="#herramientas" type="button" role="tab" aria-controls="herramientas" aria-selected="false">Herramientas</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="idiomas-tab" data-bs-toggle="tab" data-bs-target="#idiomas" type="button" role="tab" aria-controls="idiomas" aria-selected="false">Idiomas</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="logros-tab" data-bs-toggle="tab" data-bs-target="#logros" type="button" role="tab" aria-controls="logros" aria-selected="false">Logros</button>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content" id="trayTabContent">
+          <!-- Certificaciones -->
+          <div class="tab-pane fade show active" id="certs" role="tabpanel" aria-labelledby="certs-tab" tabindex="0">
+            <div class="row g-3">
+              <div class="col-lg-7">
+                <h4 class="mb-2">Certificaciones registradas</h4>
+                <ul id="certList" class="list-unstyled">
+                  <!-- Items llenados dinámicamente -->
+                </ul>
+                <div id="certEmpty" class="pub-empty small-muted" style="display:none;">No hay certificaciones registradas.</div>
+              </div>
+
+              <aside class="col-lg-5">
+                <div class="card border-borgona mb-3">
+                  <div class="card-body">
+                    <h5 class="mb-2">Agregar certificación</h5>
+                    <form id="certForm" class="needs-validation" novalidate>
+                      <label class="form-label">Nombre <span class="text-danger">*</span></label>
+                      <input id="certName" class="form-control input-custom" type="text" required maxlength="200" />
+                      <div class="invalid-feedback">Introduce el nombre de la certificación.</div>
+
+                      <label class="form-label mt-2">Institución</label>
+                      <input id="certOrg" class="form-control input-custom" type="text" maxlength="150" />
+
+                      <label class="form-label mt-2">Año</label>
+                      <input id="certYear" class="form-control input-custom" type="number" min="1900" max="2100" />
+
+                      <label class="form-label mt-2">Archivo (opcional)</label>
+                      <input id="certFile" class="form-control input-custom" type="file" accept=".pdf,.jpg,.png" />
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button type="submit" class="btn btn-borgona btn-sm">Agregar</button>
+                        <button type="reset" class="btn btn-outline-secondary btn-sm">Limpiar</button>
+                      </div>
+
+                      <div id="certFormMsg" class="pub-inline-feedback mt-2" role="status" aria-live="polite" style="display:none;"></div>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- Cursos -->
+          <div class="tab-pane fade" id="cursos" role="tabpanel" aria-labelledby="cursos-tab" tabindex="0">
+            <div class="row g-3">
+              <div class="col-lg-7">
+                <h4 class="mb-2">Cursos y diplomados</h4>
+                <ul id="coursesList" class="list-group"></ul>
+                <div id="coursesEmpty" class="pub-empty small-muted" style="display:none;">No hay cursos registrados.</div>
+              </div>
+
+              <aside class="col-lg-5">
+                <div class="card border-borgona">
+                  <div class="card-body">
+                    <h5 class="mb-2">Agregar curso</h5>
+                    <form id="courseForm" class="needs-validation" novalidate>
+                      <label class="form-label">Título <span class="text-danger">*</span></label>
+                      <input id="courseTitle" class="form-control input-custom" type="text" required />
+
+                      <label class="form-label mt-2">Institución</label>
+                      <input id="courseProvider" class="form-control input-custom" type="text" />
+
+                      <label class="form-label mt-2">Duración (hrs)</label>
+                      <input id="courseHours" class="form-control input-custom" type="number" min="1" />
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button type="submit" class="btn btn-borgona btn-sm">Agregar</button>
+                        <button type="reset" class="btn btn-outline-secondary btn-sm">Limpiar</button>
+                      </div>
+
+                      <div id="courseFormMsg" class="pub-inline-feedback mt-2" role="status" aria-live="polite" style="display:none;"></div>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- Herramientas -->
+          <div class="tab-pane fade" id="herramientas" role="tabpanel" aria-labelledby="herramientas-tab" tabindex="0">
+            <div class="row g-3">
+              <div class="col-md-8">
+                <h4 class="mb-2">Herramientas y tecnologías</h4>
+                <div id="toolsList" class="d-flex flex-wrap gap-2"></div>
+                <div id="toolsEmpty" class="pub-empty small-muted" style="display:none;">No hay herramientas registradas.</div>
+              </div>
+
+              <aside class="col-md-4">
+                <label class="form-label">Añadir herramienta</label>
+                <div class="input-group">
+                  <input id="toolInput" class="form-control input-custom" type="text" placeholder="Ej. Python, Git, QGIS" />
+                  <button id="addToolBtn" class="btn btn-borgona" type="button">Agregar</button>
+                </div>
+                <div id="toolMsg" class="small-muted mt-2">Máx. 12 herramientas. Evita duplicados.</div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- Idiomas -->
+          <div class="tab-pane fade" id="idiomas" role="tabpanel" aria-labelledby="idiomas-tab" tabindex="0">
+            <div class="row g-3">
+              <div class="col-md-7">
+                <h4 class="mb-2">Idiomas</h4>
+                <ul id="langsList" class="list-group"></ul>
+                <div id="langsEmpty" class="pub-empty small-muted" style="display:none;">No hay idiomas registrados.</div>
+              </div>
+
+              <aside class="col-md-5">
+                <div class="card border-borgona">
+                  <div class="card-body">
+                    <h5 class="mb-2">Agregar idioma</h5>
+                    <form id="langForm" class="needs-validation" novalidate>
+                      <label class="form-label">Idioma <span class="text-danger">*</span></label>
+                      <input id="langName" class="form-control input-custom" type="text" required />
+
+                      <label class="form-label mt-2">Nivel</label>
+                      <select id="langLevel" class="form-select input-custom">
+                        <option value="basico">Básico</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                        <option value="nativo">Nativo</option>
+                      </select>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button type="submit" class="btn btn-borgona btn-sm">Agregar</button>
+                        <button type="reset" class="btn btn-outline-secondary btn-sm">Limpiar</button>
+                      </div>
+
+                      <div id="langFormMsg" class="pub-inline-feedback mt-2" role="status" aria-live="polite" style="display:none;"></div>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <!-- Logros -->
+          <div class="tab-pane fade" id="logros" role="tabpanel" aria-labelledby="logros-tab" tabindex="0">
+            <div class="row g-3">
+              <div class="col-lg-8">
+                <h4 class="mb-2">Logros</h4>
+                <ul id="achievementsList" class="list-group"></ul>
+                <div id="achEmpty" class="pub-empty small-muted" style="display:none;">No hay logros registrados.</div>
+              </div>
+
+              <aside class="col-lg-4">
+                <div class="card border-borgona">
+                  <div class="card-body">
+                    <h5 class="mb-2">Agregar logro</h5>
+                    <form id="achievementForm" class="needs-validation" novalidate>
+                      <label class="form-label">Título <span class="text-danger">*</span></label>
+                      <input id="achTitle" class="form-control input-custom" type="text" required />
+
+                      <label class="form-label mt-2">Descripción</label>
+                      <textarea id="achDesc" class="form-control input-custom" rows="3"></textarea>
+
+                      <div class="d-flex gap-2 mt-3">
+                        <button type="submit" class="btn btn-borgona btn-sm">Agregar</button>
+                        <button type="reset" class="btn btn-outline-secondary btn-sm">Limpiar</button>
+                      </div>
+
+                      <div id="achFormMsg" class="pub-inline-feedback mt-2" role="status" aria-live="polite" style="display:none;"></div>
+                    </form>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Modal ligero para ver ítem (reutilizable) -->
+  <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-borgona">
+        <div class="modal-header">
+          <h5 class="modal-title text-borgona" id="itemModalLabel">Detalle</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="itemModalBody" aria-live="polite"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>

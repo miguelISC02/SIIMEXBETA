@@ -1,0 +1,324 @@
+<header class="publications-header mb-3" aria-labelledby="pageTitle">
+      <div>
+        <h1 id="pageTitle" class="text-borgona">Publicaciones y Divulgación</h1>
+        <p class="muted-small mb-0">Explora artículos, capítulos, libros y reportes; solicita la publicación de tu trabajo. Usa filtros para afinar resultados.</p>
+      </div>
+
+      <div class="pub-controls" role="search" aria-label="Controles de búsqueda y filtrado">
+        <input id="pubSearch" class="form-control input-filter" type="search" placeholder="Buscar por título, autor o palabra clave" aria-label="Buscar publicaciones" autocapitalize="off" autocomplete="off" />
+        <select id="pubFilterType" class="form-select input-custom" aria-label="Filtrar por tipo">
+          <option value="">Tipo</option>
+          <option value="articulo">Artículo</option>
+          <option value="capitulo">Capítulo</option>
+          <option value="libro">Libro</option>
+          <option value="reporte">Reporte</option>
+        </select>
+        <select id="pubFilterYear" class="form-select input-custom" aria-label="Filtrar por año">
+          <option value="">Año</option>
+          <option value="2025">2025</option>
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+        </select>
+
+        <!-- Quick actions -->
+        <div class="btn-group" role="group" aria-label="Acciones rápidas">
+          <button id="saveFiltersBtn" type="button" class="btn btn-outline-secondary" title="Guardar filtros actuales" aria-pressed="false">Guardar filtros</button>
+          <button id="clearQuickBtn" type="button" class="btn btn-outline-secondary" title="Restablecer filtros">Restablecer</button>
+        </div>
+
+        <!-- Helper: keyboard shortcut hint -->
+      </div>
+    </header>
+
+    <div class="row">
+      <!-- Aside: filtros avanzados -->
+      <aside class="col-lg-3 publications-aside" aria-label="Filtros avanzados">
+        <div class="card border-borgona mb-3">
+          <div class="card-header">Filtros avanzados</div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="filterArea" class="form-label">Área temática</label>
+              <select id="filterArea" class="form-select input-custom" aria-label="Filtrar por área temática">
+                <option value="">Todas</option>
+                <option value="energia">Energía</option>
+                <option value="educacion">Educación</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="salud">Salud</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="filterLang" class="form-label">Idioma</label>
+              <select id="filterLang" class="form-select input-custom" aria-label="Filtrar por idioma">
+                <option value="">Cualquiera</option>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="filterAccess" class="form-label">Acceso</label>
+              <select id="filterAccess" class="form-select input-custom" aria-label="Filtrar por tipo de acceso">
+                <option value="">Cualquiera</option>
+                <option value="open">Acceso abierto</option>
+                <option value="restricted">Restringido</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="sortBy" class="form-label">Ordenar por</label>
+              <select id="sortBy" class="form-select input-custom" aria-label="Ordenar publicaciones">
+                <option value="relevance">Relevancia</option>
+                <option value="newest">Más recientes</option>
+                <option value="oldest">Más antiguos</option>
+                <option value="authors">Autor (A-Z)</option>
+              </select>
+            </div>
+
+            <div class="d-grid mt-3">
+              <button id="applyFilters" type="button" class="btn btn-borgona">Aplicar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-borgona mb-3">
+          <div class="card-header">Estadísticas</div>
+          <div class="card-body">
+            <ul class="list-unstyled mb-0 small-muted">
+              <li><strong id="countTotal" class="kv">0</strong> publicaciones</li>
+              <li><strong id="countOpen" class="kv">0</strong> acceso abierto</li>
+              <li><strong id="countReviewed" class="kv">0</strong> revisadas</li>
+            </ul>
+            <div class="form-text muted-small mt-2">Resultados actualizados según filtros.</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Listado: publicaciones -->
+      <section class="col-lg-9" aria-label="Listado de publicaciones">
+        <!-- Live region for announcements -->
+        <div id="announcer" class="sr-only" aria-live="polite"></div>
+
+        <div id="publicationsGrid" #publicationsGrid class="publications-grid row g-4" aria-live="polite" aria-busy="false">
+          <!-- Card template example (repeat dynamically) -->
+          <article class="col-sm-6 col-lg-4 publication-card" data-type="articulo" data-year="2024" data-area="energia" data-keywords="energías renovables impacto social">
+            <div class="card h-100 border-borgona">
+              <div class="card-body d-flex flex-column">
+                <h3 class="conv-card-title h6 mb-1">Energías Renovables en Zonas Rurales</h3>
+                <p class="publication-meta small mb-2">Felipe García · 2024 · Artículo revisado · Español</p>
+
+                <p class="publication-abstract small mb-3">Estudio interdisciplinario sobre la implementación de sistemas fotovoltaicos en comunidades rurales y su impacto socioeconómico.</p>
+
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="publication-actions d-flex" role="group" aria-label="Acciones de la publicación">
+                                        <a href="../../../assets/cv/ZonasRurales.pdf" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Abrir</a>
+                  </div>
+                  <small class="pub-access muted-small">Acceso abierto</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Example: book card -->
+          <article class="col-sm-6 col-lg-4 publication-card" data-type="libro" data-year="2023" data-area="educacion" data-keywords="educación tecnología inclusión">
+            <div class="card h-100 border-borgona">
+              <div class="card-body d-flex flex-column">
+                <h3 class="conv-card-title h6 mb-1">Tecnologías para la Inclusión Educativa</h3>
+                <p class="publication-meta small mb-2">Ana Martínez · 2023 · Libro · Español</p>
+
+                <p class="publication-abstract small mb-3">Compendio de estudios y casos sobre el uso de tecnologías para mejorar la accesibilidad en contextos escolares diversos.</p>
+
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="publication-actions d-flex">
+                    <a href="../../../assets/cv/inclusion educativa.pdf" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">Abrir</a>
+                  </div>
+                  <small class="pub-access muted-small">Acceso restringido</small>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Placeholder for skeleton state (aria-hidden when not used) -->
+          <div id="skeletons" class="row g-4" aria-hidden="true" style="display:none;">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card h-100 border-borgona" style="min-height:200px;">
+                <div class="card-body">
+                  <div class="upload-placeholder" style="height:110px;"></div>
+                  <div class="mt-3">
+                    <div style="height:12px;width:80%;background:#eee;border-radius:6px;"></div>
+                    <div style="height:10px;width:60%;background:#f2f2f2;border-radius:6px;margin-top:6px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <nav aria-label="Paginación de publicaciones" class="mt-4">
+          <ul id="pubPagination" class="pagination pub-pagination justify-content-center">
+            <li class="page-item disabled"><button class="page-link" aria-label="Página anterior">«</button></li>
+            <li class="page-item active" aria-current="page"><button class="page-link">1</button></li>
+            <li class="page-item"><button class="page-link">2</button></li>
+            <li class="page-item"><button class="page-link">3</button></li>
+            <li class="page-item"><button class="page-link" aria-label="Página siguiente">»</button></li>
+          </ul>
+        </nav>
+
+        <div id="pubEmpty" class="pub-empty" style="display:none;">
+          <img src="../public/img/buscar.png" alt="" style="width:80px; opacity:.6;">
+          <p class="muted-small mt-2">No se encontraron publicaciones que coincidan con los filtros.</p>
+        </div>
+      </section>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Formulario de solicitud de publicación (mejorado UX) -->
+    <section id="submitSection" aria-labelledby="submitHeading">
+      <div class="d-flex justify-content-between align-items-start mb-3">
+        <h2 id="submitHeading" class="text-borgona">Solicitar Publicación</h2>
+        <p class="muted-small mb-0">Completa el formulario; los campos se adaptan según el tipo seleccionado. Usa el botón "Previsualizar" antes de enviar.</p>
+      </div>
+
+      <div class="card border-borgona publication-form">
+        <div class="card-body">
+          <form id="publicacionForm" class="needs-validation" novalidate enctype="multipart/form-data" method="post" action="/api/publicaciones/solicitar">
+            <div class="row g-3">
+              <div class="col-md-8">
+                <label for="pubTitle" class="form-label">Título <span class="text-danger">*</span></label>
+                <input id="pubTitle" name="title" type="text" class="form-control input-custom" required maxlength="300" placeholder="Título de la publicación" />
+                <div class="invalid-feedback">Introduce un título válido (máx. 300 caracteres).</div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="pubType" class="form-label">Tipo de publicación <span class="text-danger">*</span></label>
+                <select id="pubType" name="type" class="form-select input-custom" required aria-describedby="pubTypeHelp">
+                  <option value="">Selecciona...</option>
+                  <option value="articulo">Artículo</option>
+                  <option value="capitulo">Capítulo</option>
+                  <option value="libro">Libro</option>
+                  <option value="reporte">Reporte técnico</option>
+                </select>
+                <div id="pubTypeHelp" class="form-text muted-small">Selecciona el tipo para mostrar campos específicos.</div>
+                <div class="invalid-feedback">Selecciona un tipo de publicación.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="pubAuthors" class="form-label">Autor(es) <span class="text-danger">*</span></label>
+                <input id="pubAuthors" name="authors" type="text" class="form-control input-custom" placeholder="Nombre(s) separados por comas" required />
+                <div class="invalid-feedback">Introduce al menos un autor.</div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="pubYear" class="form-label">Año de publicación</label>
+                <input id="pubYear" name="year" type="number" class="form-control input-custom" min="1900" max="2100" placeholder="2025" />
+                <div class="invalid-feedback">Año inválido (1900-2100).</div>
+              </div>
+
+              <div class="col-md-3">
+                <label for="pubPublisher" class="form-label">Editorial / Institución</label>
+                <input id="pubPublisher" name="publisher" type="text" class="form-control input-custom" placeholder="Opcional" />
+              </div>
+
+              <!-- Campos dinámicos (visibilidad controlada por JS) -->
+              <div id="fieldISBN" class="col-md-4 dynamic-field hidden">
+                <label for="pubISBN" class="form-label">ISBN <span class="text-danger">*</span></label>
+                <input id="pubISBN" name="isbn" type="text" class="form-control input-custom" pattern="^[0-9\-]{10,17}$" placeholder="ISBN-13" />
+                <div class="invalid-feedback">Formato ISBN inválido.</div>
+              </div>
+
+              <div id="fieldJournal" class="col-md-4 dynamic-field hidden">
+                <label for="pubJournal" class="form-label">Revista / Volumen <span class="text-danger">*</span></label>
+                <input id="pubJournal" name="journal" type="text" class="form-control input-custom" placeholder="Nombre de la revista / Volumen" />
+                <div class="invalid-feedback">Introduce la revista o volumen.</div>
+              </div>
+
+              <div id="fieldProject" class="col-md-4 dynamic-field hidden">
+                <label for="pubProject" class="form-label">Proyecto asociado</label>
+                <input id="pubProject" name="project" type="text" class="form-control input-custom" placeholder="Código o título del proyecto" />
+              </div>
+
+              <div class="col-12">
+                <label for="pubAbstract" class="form-label">Resumen / Abstract <span class="text-danger">*</span></label>
+                <textarea id="pubAbstract" name="abstract" class="form-control input-custom" rows="6" maxlength="5000" required></textarea>
+                <div class="form-text muted-small">Máx. 5000 caracteres. Incluye objetivo, método y resultados principales.</div>
+                <div class="invalid-feedback">Añade un resumen breve.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="pubFile" class="form-label">Archivo principal (PDF) <span class="text-danger">*</span></label>
+                <input id="pubFile" name="file" type="file" class="form-control input-custom" accept=".pdf" required />
+                <div class="form-text muted-small">Formato PDF; máximo 10 MB.</div>
+                <div class="invalid-feedback">Adjunta el archivo en PDF.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="pubSupplement" class="form-label">Archivos suplementarios (opcional)</label>
+                <input id="pubSupplement" name="supplement" type="file" class="form-control input-custom" accept=".pdf,.zip,.csv" multiple />
+                <div class="form-text muted-small">Archivos opcionales: datos, anexos, figuras (máx. 50 MB en total).</div>
+              </div>
+
+              <div class="col-12">
+                <label for="pubKeywords" class="form-label">Palabras clave <span class="text-danger">*</span></label>
+                <input id="pubKeywords" name="keywords" type="text" class="form-control input-custom" placeholder="Separadas por comas" required />
+                <div class="invalid-feedback">Introduce al menos una palabra clave.</div>
+                <div class="form-text muted-small">Ayuda a indexar tu trabajo en búsquedas.</div>
+              </div>
+
+              <div class="col-12 d-flex gap-2 align-items-center">
+                <div class="form-check me-auto">
+                  <input id="pubTerms" name="terms" class="form-check-input" type="checkbox" required />
+                  <label class="form-check-label muted-small" for="pubTerms">Acepto los términos y condiciones de publicación y los derechos de autor</label>
+                  <div class="invalid-feedback">Debes aceptar los términos.</div>
+                </div>
+
+                <div class="btn-group" role="group" aria-label="acciones formulario">
+                  <button type="button" id="previewBtn" class="btn btn-outline-secondary" title="Previsualizar publicación">Previsualizar</button>
+                  <button type="reset" class="btn btn-outline-secondary">Limpiar</button>
+                  <button type="submit" class="btn btn-borgona" id="submitPublicationBtn">Solicitar Revisión</button>
+                </div>
+              </div>
+            </div>
+
+            <div id="pubFormMessage" class="pub-inline-feedback mt-3" role="status" aria-live="polite" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  <!-- Modal: detalles de publicación -->
+  <div class="modal fade" id="pubModal" #pubModal tabindex="-1" aria-labelledby="pubModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content border-borgona">
+        <div class="modal-header">
+          <h5 class="modal-title text-borgona" id="pubModalLabel">Detalles de la publicación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body" id="pubDetails" #pubDetails aria-live="polite"></div>
+          <!-- JS inyectará: título, autores, año, resumen, metadatos y enlaces -->
+        </div>
+        <div class="modal-footer">
+           <a id="pubDetailsOpen" #pubDetailsOpen href="../../../assets/cv/curriculumVitae-Ejemplos.pdf" target="" rel="noopener" class="btn btn-borgona">Abrir PDF</a>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+  <!-- Modal: confirmación de solicitud -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-borgona text-center">
+      <div class="modal-header border-0 justify-content-center">
+        <h5 class="modal-title text-borgona fw-bold" id="successModalLabel">Solicitud enviada</h5>
+      </div>
+      <div class="modal-body">
+        <p class="mb-0">Tu publicación ha sido registrada correctamente y está en revisión.</p>
+        <p class="muted-small mt-2 mb-0">Recibirás una notificación una vez completado el proceso.</p>
+      </div>
+      <div class="modal-footer border-0 justify-content-center">
+        <button type="button" class="btn btn-borgona" data-bs-dismiss="modal">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

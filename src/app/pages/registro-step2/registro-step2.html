@@ -1,0 +1,62 @@
+<div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card border-borgona p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="text-borgona mb-0">Completa tu registro</h2>
+            <small class="muted-small">Paso 2 de 2</small>
+          </div>
+
+          <p class="small-muted">Sube tu CV y documentos oficiales. Todos los archivos deben ser PDF o imágenes (JPG/PNG). Tamaño máximo recomendado 10 MB por archivo.</p>
+
+          <form id="step2Form" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="cvFile" class="form-label">Currículum Vitae (PDF) <span class="text-danger">*</span></label>
+              <input id="cvFile" name="cvFile" type="file" class="form-control input-custom" accept=".pdf" required />
+              <div class="form-text small-muted">Sube tu CV en formato PDF (máx. 10 MB).</div>
+              <div class="invalid-feedback">Adjunta tu CV en PDF.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="rfcNum" class="form-label">RFC (sin guiones) <span class="text-danger">*</span></label>
+              <input id="rfcNum" name="rfcNum" type="text" class="form-control input-custom text-uppercase" maxlength="13" pattern="^[A-ZÑ&0-9]{12,13}$" required />
+              <div class="form-text small-muted">Introduce tu RFC en mayúsculas, sin guiones ni espacios.</div>
+              <div class="invalid-feedback">RFC inválido o vacío.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="fiscalPdf" class="form-label">Constancia de situación fiscal / comprobante RFC (PDF) <span class="text-danger">*</span></label>
+              <input id="fiscalPdf" name="fiscalPdf" type="file" class="form-control input-custom" accept=".pdf" required />
+              <div class="form-text small-muted">Este documento acredita tu RFC ante autoridad fiscal.</div>
+              <div class="invalid-feedback">Adjunta la constancia fiscal.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="domicilio" class="form-label">Comprobante de domicilio (PDF/JPG/PNG) <span class="text-danger">*</span></label>
+              <input id="domicilio" name="domicilio" type="file" class="form-control input-custom" accept=".pdf,.jpg,.jpeg,.png" required />
+              <div class="form-text small-muted">Recibo de luz, agua o extracto bancario reciente.</div>
+              <div class="invalid-feedback">Adjunta un comprobante de domicilio válido.</div>
+            </div>
+
+            <div class="mb-3">
+              <label for="cert1" class="form-label">Certificado 1 (opcional)</label>
+              <input id="cert1" name="cert1" type="file" class="form-control input-custom" accept=".pdf,.jpg,.png" />
+            </div>
+
+            <div class="mb-3">
+              <label for="cert2" class="form-label">Certificado 2 (opcional)</label>
+              <input id="cert2" name="cert2" type="file" class="form-control input-custom" accept=".pdf,.jpg,.png" />
+            </div>
+
+            <div class="d-flex gap-2 justify-content-between align-items-center mt-4">
+              <a href="/login" class="btn btn-outline-secondary">Volver</a>
+              <div>
+                <a href="/landing" id="saveDraft" class="btn btn-outline-secondary me-2">Guardar borrador</a>
+                <a href="/landing" class="btn btn-borgona">Completar registro</a>
+              </div>
+            </div>
+
+            <div id="step2Message" class="pub-inline-feedback mt-3" role="status" aria-live="polite" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>

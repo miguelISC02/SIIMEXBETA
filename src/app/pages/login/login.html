@@ -1,0 +1,52 @@
+  <div class="login-wrapper d-flex flex-column">
+    <div class="login-container d-flex">
+      <!-- Sección: Login -->
+      <div class="login-left p-4">
+        <h1 class="siemx-title">SIIMEX</h1>
+        <p class="siemx-subtitle">Sistema de Investigadores e Innovadores Mexiquenses</p>
+
+        <form>
+          <!-- Campo correo con imagen -->
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo</label>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-borgona">
+                <img src="../../../assets/img/correo.png" alt="Correo" style="width:20px; height:20px;" />
+              </span>
+              <input type="email" class="form-control input-custom" id="correo" placeholder="ejemplo@correo.com" />
+            </div>
+          </div>
+
+          <!-- Campo contraseña con imagen -->
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <div class="input-group">
+              <span class="input-group-text bg-light border-borgona">
+                <img src="../../../assets/img/pass.png" alt="Contraseña" style="width:20px; height:20px;" />
+              </span>
+              <input type="password" class="form-control input-custom" id="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+          <!-- Recordar y recuperar -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="recordar" />
+              <label class="form-check-label" for="recordar">Recuérdame</label>
+            </div>
+            <a href="/recuperacion" class="forgot-link">¿Olvidó la contraseña?</a>
+          </div>
+
+          <a href="/landing" class="btn btn-login w-100">INGRESAR</a>
+        </form>
+      </div>
+
+      <!-- Sección: Registro -->
+      <div class="login-right p-4 text-center">
+        <img src="../../../assets/img/logo.png" alt="Logo COMECyT" class="img-fluid mb-3" style="max-height: 100px;" />
+        <h2 class="comecyt-title">COMECyT</h2>
+        <p class="comecyt-subtitle">Consejo Mexiquense de Ciencia y Tecnología</p>
+        <a href="/registro" class="btn btn-register mt-3">REGISTRARSE</a>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,38 @@
+<!-- src/app/shared/navbar/navbar.html -->
+<ng-container *ngIf="mostrarNavbar">
+  <!-- Barra decorativa superior (opcional) -->
+  <div class="header-bar"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-borgona px-4" role="navigation" aria-label="Principal">
+    <a class="navbar-brand fw-bold text-white" routerLink="/landing">COMECyT</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+            aria-controls="menuNav" aria-expanded="false" aria-label="Alternar navegación">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menuNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/perfil" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/convocatorias" routerLinkActive="active">Convocatorias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/investigadores" routerLinkActive="active">Investigadores</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/publicaciones" routerLinkActive="active">Publicaciones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <!-- temporal: navega a login; luego lo cambiamos a logout real -->
+          <a class="nav-link text-white" routerLink="/login" routerLinkActive="active">Cerrar sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</ng-container>
