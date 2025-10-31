@@ -1,29 +1,183 @@
-<div class="container mt-4">
-  <div id="carouselSIMEX" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <a href="https://comecyt.edomex.gob.mx/programa-investigadoras-investigadores" target="_blank" rel="noopener">
-          <img src="/assets/img/Banner Investigadoras.png" class="d-block w-100" alt="Imagen 1">
+<div class="landing-wrap">
+
+  <!-- ===== CARRUSEL (tu bloque, le agregué indicadores y lazy) ===== -->
+  <div class="container mt-4">
+    <div id="carouselSIMEX" class="carousel slide" data-bs-ride="carousel" aria-label="Convocatorias destacadas">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselSIMEX" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Banner 1"></button>
+        <button type="button" data-bs-target="#carouselSIMEX" data-bs-slide-to="1" aria-label="Banner 2"></button>
+        <button type="button" data-bs-target="#carouselSIMEX" data-bs-slide-to="2" aria-label="Banner 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://comecyt.edomex.gob.mx/programa-investigadoras-investigadores" target="_blank" rel="noopener">
+            <img src="/assets/img/Banner Investigadoras.png" class="d-block w-100" alt="Programa Investigadoras e Investigadores COMECyT 2025">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://comecyt.edomex.gob.mx/premio-talento-edomex" target="_blank" rel="noopener">
+            <img loading="lazy" src="/assets/img/BANNER_856X335PX_HNC.png" class="d-block w-100" alt="Premio Talento Edomex">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://miestatusbienestar.com.mx/mujeres-con-bienestar/" target="_blank" rel="noopener">
+            <img loading="lazy" src="/assets/img/thumbnail_BANNER MUJERES CON BIENESTAR.jpg" class="d-block w-100" alt="Mujeres con Bienestar">
+          </a>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSIMEX" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselSIMEX" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== HERO: Título + CTA ===== -->
+  <section class="container hero mt-4">
+    <div class="hero-card">
+      <div>
+        <h1 class="hero-title">Impulsamos ciencia, tecnología e innovación en el Edoméx</h1>
+        <p class="hero-sub">Programas, premios y apoyos para acelerar tu investigación y vincularte con la comunidad.</p>
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-borgona" href="/convocatorias">Conocer apoyos</a>
+        <a class="btn btn-ghost-borgona" href="https://comecyt.edomex.gob.mx/" target="_blank" rel="noopener">Sitio COMECyT</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3 BENEFICIOS ===== -->
+  <section class="container mt-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🎯</div>
+          <h3 class="feature-title">Convocatorias claras</h3>
+          <p class="feature-text">Bases simples, requisitos transparentes y calendario público para postular sin fricción.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🤝</div>
+          <h3 class="feature-title">Acompañamiento</h3>
+          <p class="feature-text">Mentoría y canales de soporte para dudas técnicas y administrativas.</p>
+        </article>
+      </div>
+      <div class="col-md-4">
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">🚀</div>
+          <h3 class="feature-title">Impacto medible</h3>
+          <p class="feature-text">Proyectos con resultados verificables y difusión de logros.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONVOCATORIAS (recicla tus 3 enlaces) ===== -->
+  <section class="container mt-5">
+    <div class="section-head">
+      <h2 class="section-title">Convocatorias activas</h2>
+      <a class="link-borgona" href="https://comecyt.edomex.gob.mx/" target="_blank" rel="noopener">Ver todas</a>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-md-4">
+        <a class="card-link" href="https://comecyt.edomex.gob.mx/programa-investigadoras-investigadores" target="_blank" rel="noopener">
+          <article class="promo-card">
+            <img loading="lazy" src="/assets/img/Banner Investigadoras.png" alt="" />
+            <div class="promo-body">
+              <h3 class="promo-title">Investigadoras e Investigadores</h3>
+              <p class="promo-text">Apoyo a proyectos 2025.</p>
+            </div>
+          </article>
         </a>
       </div>
-      <div class="carousel-item">
-        <a href="https://comecyt.edomex.gob.mx/premio-talento-edomex" target="_blank" rel="noopener">
-          <img src="/assets/img/BANNER_856X335PX_HNC.png" class="d-block w-100" alt="Imagen 2">
+
+      <div class="col-md-4">
+        <a class="card-link" href="https://comecyt.edomex.gob.mx/premio-talento-edomex" target="_blank" rel="noopener">
+          <article class="promo-card">
+            <img loading="lazy" src="/assets/img/BANNER_856X335PX_HNC.png" alt="" />
+            <div class="promo-body">
+              <h3 class="promo-title">Premio Talento Edomex</h3>
+              <p class="promo-text">Reconocimiento a la excelencia.</p>
+            </div>
+          </article>
         </a>
       </div>
-      <div class="carousel-item">
-        <a href="https://miestatusbienestar.com.mx/mujeres-con-bienestar/" target="_blank" rel="noopener">
-          <img src="/assets/img/thumbnail_BANNER MUJERES CON BIENESTAR.jpg" class="d-block w-100" alt="Imagen 3">
+
+      <div class="col-md-4">
+        <a class="card-link" href="https://miestatusbienestar.com.mx/mujeres-con-bienestar/" target="_blank" rel="noopener">
+          <article class="promo-card">
+            <img loading="lazy" src="/assets/img/thumbnail_BANNER MUJERES CON BIENESTAR.jpg" alt="" />
+            <div class="promo-body">
+              <h3 class="promo-title">Mujeres con Bienestar</h3>
+              <p class="promo-text">Impulso y acompañamiento.</p>
+            </div>
+          </article>
         </a>
       </div>
     </div>
+  </section>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselSIMEX" data-bs-slide="prev" aria-label="Anterior">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
+  <!-- ===== MÉTRICAS ===== -->
+  <section class="container mt-5">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">+1,200</div>
+        <div class="stat-label">Proyectos apoyados</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">+350</div>
+        <div class="stat-label">Instituciones vinculadas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15</div>
+        <div class="stat-label">Años impulsando talento</div>
+      </div>
+    </div>
+  </section>
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselSIMEX" data-bs-slide="next" aria-label="Siguiente">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-  </div>
+  <!-- ===== LÍNEA DE TIEMPO ===== -->
+  <section class="container mt-5 mb-6">
+    <h2 class="section-title">Cómo participar</h2>
+    <ol class="timeline" aria-label="Proceso de participación">
+      <li class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-content">
+          <h4 class="tl-title">1. Revisa bases</h4>
+          <p>Fechas, requisitos y documentos.</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-content">
+          <h4 class="tl-title">2. Regístrate</h4>
+          <p>Completa tu solicitud y adjunta evidencia.</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-content">
+          <h4 class="tl-title">3. Evaluación</h4>
+          <p>Revisión técnica y dictamen.</p>
+        </div>
+      </li>
+      <li class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-content">
+          <h4 class="tl-title">4. Resultados</h4>
+          <p>Publicación y acompañamiento.</p>
+        </div>
+      </li>
+    </ol>
+
+    <div class="text-center mt-3">
+      <a class="btn btn-borgona" href="/contacto">Tengo dudas — contáctanos</a>
+    </div>
+  </section>
+
 </div>

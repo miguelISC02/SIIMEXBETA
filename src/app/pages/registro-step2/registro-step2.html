@@ -1,62 +1,247 @@
 <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card border-borgona p-4">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <h2 class="text-borgona mb-0">Completa tu registro</h2>
-            <small class="muted-small">Paso 2 de 2</small>
+  <div class="col-12 col-xxl-10">
+    <div class="card p-4 form-card">
+      <!-- Header -->
+      <div class="d-flex justify-content-between align-items-start flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="text-borgona mb-1">Completa tu registro</h2>
+          <p class="small-muted m-0">
+            Formatos: <b>PDF</b> y <b>JPG/PNG</b>. Tamaño máx. <b>{{ MAX_MB }} MB</b> por archivo.
+          </p>
+        </div>
+        <small class="muted-small">Paso 2 de 2</small>
+      </div>
+
+      <form [formGroup]="form" (ngSubmit)="submit()" novalidate enctype="multipart/form-data">
+        <div class="row g-4">
+          <!-- Main content -->
+          <div class="col-12 col-lg-8">
+            <!-- 1. CV -->
+            <section id="sec-cv" class="sec">
+              <header class="sec-head">
+                <span class="sec-n">1</span>
+                <div class="sec-titles">
+                  <h3 class="sec-title">Currículum Vitae (PDF) <span class="req">*</span></h3>
+                  <div class="sec-meta">Máx. {{ MAX_MB }} MB</div>
+                </div>
+              </header>
+
+              <div class="drop"
+                   [class.drop--active]="dragging()==='cvFile'"
+                   (dragover)="onDragOver($event, 'cvFile')"
+                   (dragleave)="onDragLeave()"
+                   (drop)="onDrop($event, 'cvFile')">
+                <input type="file" class="visually-hidden" id="cvFile"
+                       (change)="onInputFile($event,'cvFile')" accept=".pdf,application/pdf" />
+                <label for="cvFile" class="drop-inner">
+                  <div class="drop-ico">⬆️</div>
+                  <div class="drop-title">Arrastra tu PDF o <u>selecciónalo</u></div>
+                </label>
+              </div>
+
+              <div class="file-chip" *ngIf="f.cvFile.value as cv">
+                <span class="chip-ico">📄</span>
+                <span class="chip-name" title="{{ cv.name }}">{{ cv.name }}</span>
+                <span class="chip-size">{{ humanSize(cv.size) }}</span>
+                <button type="button" class="chip-del" (click)="clearFile('cvFile')" aria-label="Eliminar archivo">✕</button>
+              </div>
+
+              <div class="field-help" *ngIf="f.cvFile.touched && f.cvFile.errors?.['requiredFile']">Adjunta tu CV.</div>
+              <div class="field-help" *ngIf="f.cvFile.touched && f.cvFile.errors?.['maxSize']">El archivo supera {{MAX_MB}} MB.</div>
+              <div class="field-help" *ngIf="f.cvFile.touched && f.cvFile.errors?.['accept']">Solo PDF.</div>
+            </section>
+
+            <!-- 2. Identidad fiscal -->
+            <section id="sec-fiscal" class="sec">
+              <header class="sec-head">
+                <span class="sec-n">2</span>
+                <div class="sec-titles">
+                  <h3 class="sec-title">Identidad fiscal</h3>
+                  <div class="sec-meta">RFC + Constancia (PDF) · Máx. {{ MAX_MB }} MB</div>
+                </div>
+              </header>
+
+              <div class="grid-2">
+                <div>
+                  <label for="rfcNum" class="form-label">RFC (sin guiones) <span class="req">*</span></label>
+                  <input id="rfcNum" type="text" class="form-control input-custom text-uppercase"
+                        formControlName="rfcNum" maxlength="13" placeholder="XXXX001122ABC" autocomplete="off" />
+                  <div class="small-muted mt-1">En mayúsculas, sin guiones ni espacios.</div>
+                  <div class="field-help" *ngIf="f.rfcNum.touched && f.rfcNum.errors?.['required']">Campo obligatorio.</div>
+                  <div class="field-help" *ngIf="f.rfcNum.touched && f.rfcNum.errors?.['rfc']">Formato de RFC inválido.</div>
+                </div>
+
+                <div>
+                  <label for="fiscalPdf" class="form-label">Constancia de situación fiscal (PDF) <span class="req">*</span></label>
+                  <div class="drop"
+                       [class.drop--active]="dragging()==='fiscalPdf'"
+                       (dragover)="onDragOver($event, 'fiscalPdf')"
+                       (dragleave)="onDragLeave()"
+                       (drop)="onDrop($event, 'fiscalPdf')">
+                    <input type="file" class="visually-hidden" id="fiscalPdf"
+                          (change)="onInputFile($event,'fiscalPdf')" accept=".pdf,application/pdf" />
+                    <label for="fiscalPdf" class="drop-inner">
+                      <div class="drop-ico">⬆️</div>
+                      <div class="drop-title">Arrastra tu PDF o <u>selecciónalo</u></div>
+                    </label>
+                  </div>
+
+                  <div class="file-chip" *ngIf="f.fiscalPdf.value as fiscal">
+                    <span class="chip-ico">📄</span>
+                    <span class="chip-name" title="{{ fiscal.name }}">{{ fiscal.name }}</span>
+                    <span class="chip-size">{{ humanSize(fiscal.size) }}</span>
+                    <button type="button" class="chip-del" (click)="clearFile('fiscalPdf')" aria-label="Eliminar archivo">✕</button>
+                  </div>
+
+                  <div class="field-help" *ngIf="f.fiscalPdf.touched && f.fiscalPdf.errors?.['requiredFile']">Adjunta la constancia.</div>
+                  <div class="field-help" *ngIf="f.fiscalPdf.touched && f.fiscalPdf.errors?.['maxSize']">Excede {{MAX_MB}} MB.</div>
+                  <div class="field-help" *ngIf="f.fiscalPdf.touched && f.fiscalPdf.errors?.['accept']">Solo PDF.</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 3. Domicilio -->
+            <section id="sec-domicilio" class="sec">
+              <header class="sec-head">
+                <span class="sec-n">3</span>
+                <div class="sec-titles">
+                  <h3 class="sec-title">Comprobante de domicilio (PDF/JPG/PNG) <span class="req">*</span></h3>
+                  <div class="sec-meta">Máx. {{ MAX_MB }} MB</div>
+                </div>
+              </header>
+
+              <div class="drop"
+                   [class.drop--active]="dragging()==='domicilio'"
+                   (dragover)="onDragOver($event, 'domicilio')"
+                   (dragleave)="onDragLeave()"
+                   (drop)="onDrop($event, 'domicilio')">
+                <input type="file" class="visually-hidden" id="domicilio"
+                      (change)="onInputFile($event,'domicilio')"
+                      accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+                <label for="domicilio" class="drop-inner">
+                  <div class="drop-ico">⬆️</div>
+                  <div class="drop-title">Arrastra tu archivo o <u>selecciónalo</u></div>
+                </label>
+              </div>
+
+              <div class="file-chip" *ngIf="f.domicilio.value as dom">
+                <span class="chip-ico">📄</span>
+                <span class="chip-name" title="{{ dom.name }}">{{ dom.name }}</span>
+                <span class="chip-size">{{ humanSize(dom.size) }}</span>
+                <button type="button" class="chip-del" (click)="clearFile('domicilio')" aria-label="Eliminar archivo">✕</button>
+              </div>
+
+              <div class="field-help" *ngIf="f.domicilio.touched && f.domicilio.errors?.['requiredFile']">Adjunta el comprobante.</div>
+              <div class="field-help" *ngIf="f.domicilio.touched && f.domicilio.errors?.['maxSize']">Excede {{MAX_MB}} MB.</div>
+              <div class="field-help" *ngIf="f.domicilio.touched && f.domicilio.errors?.['accept']">Formato no permitido.</div>
+            </section>
+
+            <!-- 4. Certificados (opcional, colapsable) -->
+            <section id="sec-certs" class="sec">
+              <header class="sec-head">
+                <span class="sec-n">4</span>
+                <div class="sec-titles">
+                  <h3 class="sec-title">Certificados <span class="tag-optional">Opcional</span></h3>
+                  <div class="sec-meta">PDF/JPG/PNG · Máx. {{ MAX_MB }} MB</div>
+                </div>
+                <button class="sec-toggle" type="button"
+                        [attr.aria-expanded]="showCerts" (click)="showCerts = !showCerts">
+                  {{ showCerts ? 'Ocultar' : 'Agregar' }}
+                </button>
+              </header>
+
+              <div class="sec-body" [class.is-hidden]="!showCerts">
+                <div class="grid-2">
+                  <div>
+                    <label for="cert1" class="form-label">Certificado 1</label>
+                    <div class="drop"
+                         [class.drop--active]="dragging()==='cert1'"
+                         (dragover)="onDragOver($event, 'cert1')"
+                         (dragleave)="onDragLeave()"
+                         (drop)="onDrop($event, 'cert1')">
+                      <input type="file" class="visually-hidden" id="cert1"
+                            (change)="onInputFile($event,'cert1')"
+                            accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+                      <label for="cert1" class="drop-inner">
+                        <div class="drop-ico">⬆️</div>
+                        <div class="drop-title">Arrastra aquí o <u>selecciona</u></div>
+                      </label>
+                    </div>
+                    <div class="file-chip" *ngIf="f.cert1.value as c1">
+                      <span class="chip-ico">📄</span>
+                      <span class="chip-name" title="{{ c1.name }}">{{ c1.name }}</span>
+                      <span class="chip-size">{{ humanSize(c1.size) }}</span>
+                      <button type="button" class="chip-del" (click)="clearFile('cert1')" aria-label="Eliminar archivo">✕</button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="cert2" class="form-label">Certificado 2</label>
+                    <div class="drop"
+                         [class.drop--active]="dragging()==='cert2'"
+                         (dragover)="onDragOver($event, 'cert2')"
+                         (dragleave)="onDragLeave()"
+                         (drop)="onDrop($event, 'cert2')">
+                      <input type="file" class="visually-hidden" id="cert2"
+                            (change)="onInputFile($event,'cert2')"
+                            accept=".pdf,.jpg,.jpeg,.png,application/pdf,image/jpeg,image/png" />
+                      <label for="cert2" class="drop-inner">
+                        <div class="drop-ico">⬆️</div>
+                        <div class="drop-title">Arrastra aquí o <u>selecciona</u></div>
+                      </label>
+                    </div>
+                    <div class="file-chip" *ngIf="f.cert2.value as c2">
+                      <span class="chip-ico">📄</span>
+                      <span class="chip-name" title="{{ c2.name }}">{{ c2.name }}</span>
+                      <span class="chip-size">{{ humanSize(c2.size) }}</span>
+                      <button type="button" class="chip-del" (click)="clearFile('cert2')" aria-label="Eliminar archivo">✕</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <p class="small-muted">Sube tu CV y documentos oficiales. Todos los archivos deben ser PDF o imágenes (JPG/PNG). Tamaño máximo recomendado 10 MB por archivo.</p>
-
-          <form id="step2Form" class="needs-validation" novalidate enctype="multipart/form-data">
-            <div class="mb-3">
-              <label for="cvFile" class="form-label">Currículum Vitae (PDF) <span class="text-danger">*</span></label>
-              <input id="cvFile" name="cvFile" type="file" class="form-control input-custom" accept=".pdf" required />
-              <div class="form-text small-muted">Sube tu CV en formato PDF (máx. 10 MB).</div>
-              <div class="invalid-feedback">Adjunta tu CV en PDF.</div>
+          <!-- Sticky checklist (desktop) -->
+          <aside class="col-12 col-lg-4 d-none d-lg-block">
+            <div class="side sticky-top">
+              <div class="side-title">Checklist</div>
+              <ul class="side-list">
+                <li [class.done]="f.cvFile.value">CV (PDF)</li>
+                <li [class.done]="f.rfcNum.valid">RFC válido</li>
+                <li [class.done]="f.fiscalPdf.value">Constancia fiscal (PDF)</li>
+                <li [class.done]="f.domicilio.value">Comprobante de domicilio</li>
+                <li [class.done]="f.cert1.value || f.cert2.value">Certificados (opcional)</li>
+              </ul>
+              <div class="side-tip small-muted">Marca verde = listo. Puedes volver a cualquier sección:</div>
             </div>
-
-            <div class="mb-3">
-              <label for="rfcNum" class="form-label">RFC (sin guiones) <span class="text-danger">*</span></label>
-              <input id="rfcNum" name="rfcNum" type="text" class="form-control input-custom text-uppercase" maxlength="13" pattern="^[A-ZÑ&0-9]{12,13}$" required />
-              <div class="form-text small-muted">Introduce tu RFC en mayúsculas, sin guiones ni espacios.</div>
-              <div class="invalid-feedback">RFC inválido o vacío.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="fiscalPdf" class="form-label">Constancia de situación fiscal / comprobante RFC (PDF) <span class="text-danger">*</span></label>
-              <input id="fiscalPdf" name="fiscalPdf" type="file" class="form-control input-custom" accept=".pdf" required />
-              <div class="form-text small-muted">Este documento acredita tu RFC ante autoridad fiscal.</div>
-              <div class="invalid-feedback">Adjunta la constancia fiscal.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="domicilio" class="form-label">Comprobante de domicilio (PDF/JPG/PNG) <span class="text-danger">*</span></label>
-              <input id="domicilio" name="domicilio" type="file" class="form-control input-custom" accept=".pdf,.jpg,.jpeg,.png" required />
-              <div class="form-text small-muted">Recibo de luz, agua o extracto bancario reciente.</div>
-              <div class="invalid-feedback">Adjunta un comprobante de domicilio válido.</div>
-            </div>
-
-            <div class="mb-3">
-              <label for="cert1" class="form-label">Certificado 1 (opcional)</label>
-              <input id="cert1" name="cert1" type="file" class="form-control input-custom" accept=".pdf,.jpg,.png" />
-            </div>
-
-            <div class="mb-3">
-              <label for="cert2" class="form-label">Certificado 2 (opcional)</label>
-              <input id="cert2" name="cert2" type="file" class="form-control input-custom" accept=".pdf,.jpg,.png" />
-            </div>
-
-            <div class="d-flex gap-2 justify-content-between align-items-center mt-4">
-              <a href="/login" class="btn btn-outline-secondary">Volver</a>
-              <div>
-                <a href="/landing" id="saveDraft" class="btn btn-outline-secondary me-2">Guardar borrador</a>
-                <a href="/landing" class="btn btn-borgona">Completar registro</a>
-              </div>
-            </div>
-
-            <div id="step2Message" class="pub-inline-feedback mt-3" role="status" aria-live="polite" style="display:none;"></div>
-          </form>
+          </aside>
         </div>
-      </div>
+
+        <!-- CTA (anchors se conservan) -->
+        <!-- CTA (anchors limpios, sin modales) -->
+<div class="d-flex gap-2 justify-content-between align-items-center mt-4 actions-sticky">
+  <a href="/registro" class="btn btn-outline-secondary">Volver</a>
+
+  <div class="d-flex align-items-center gap-2">
+    <!-- Guardar borrador: solo navega -->
+    <a href="/landing"
+       class="btn btn-outline-secondary"
+       (click)="saveDraft($event)">
+      Guardar borrador
+    </a>
+
+    <!-- Completar registro: valida y navega -->
+    <a href="/landing"
+       class="btn btn-borgona"
+       [class.disabled]="form.invalid"
+       (click)="submit($event)">
+      <span>Completar registro</span>
+    </a>
+  </div>
+</div>
+
+      </form>
     </div>
+  </div>
+</div>

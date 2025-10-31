@@ -1,0 +1,139 @@
+:root{
+  --borgona-rgb: 103,49,71;
+  --borgona: rgb(var(--borgona-rgb));
+  --borgona-50: rgba(var(--borgona-rgb), .06);
+  --border: #e6e6e6;
+  --text-strong: #232323;
+  --text-soft: #6b7280;
+  --shadow-sm: 0 2px 8px rgba(0,0,0,.06);
+}
+
+/* Utilitarios */
+.text-borgona{ color: var(--borgona)!important; }
+.border-borgona{ border: 1px solid var(--border)!important; }
+.muted-small{ color: var(--text-soft); }
+
+/* Card */
+.reset-card{ border-radius: 16px; box-shadow: var(--shadow-sm); }
+.card-header.bg-light,
+.card-footer.bg-light{
+  background: linear-gradient(180deg,#fff,#fafafa);
+  border-bottom:1px solid var(--border);
+}
+
+/* Inputs */
+.input-custom, .form-select{
+  border-color: var(--border);
+  border-radius: 12px;
+  min-height: 44px;
+}
+.input-custom:focus{
+  border-color: var(--borgona);
+  box-shadow: 0 0 0 3px rgba(var(--borgona-rgb), .18);
+}
+
+/* Botón borgoña */
+.btn-borgona{
+  background: var(--borgona)!important;
+  border-color: var(--borgona)!important;
+  color: #fff!important;
+  border-radius: 12px;
+  padding: .6rem 1rem;
+  font-weight: 700;
+}
+.btn-borgona:disabled{ filter: grayscale(.35); opacity:.6; cursor: not-allowed; }
+
+/* Fieldset decorativo */
+.fieldset{ border:1px dashed var(--border); border-radius: 12px; padding: 12px; position: relative; }
+.legend{ position: absolute; top:-.8rem; left:.8rem; background:#fff; padding:0 .4rem; color: var(--borgona); font-weight:700; }
+
+/* Hint */
+.id-hint{ color: var(--text-soft); }
+
+/* ===== Password field ===== */
+.pw-wrapper{
+  position: relative;
+}
+
+/* Espacio para iconos dentro del input */
+.pw-wrapper .form-control{
+  padding-left: 40px;  /* espacio para candado */
+  padding-right: 44px; /* espacio para botón ojo */
+}
+
+/* Candado decorativo: NO recibe clics */
+.pw-lock{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  pointer-events: none;  /* clave */
+  user-select: none;
+  opacity: .85;
+}
+
+/* Botón ojo: SÍ recibe clics */
+.pw-toggle{
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 2;           /* sobre el input */
+}
+.pw-toggle:focus-visible{
+  outline: 3px solid rgba(103,49,71,.35);
+  border-radius: 8px;
+  outline-offset: 2px;
+}
+
+/* Medidor de seguridad */
+.pw-meter{
+  width:100%;
+  height: 8px;
+  background:#f1f1f1;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.pw-bar{
+  height:100%;
+  width:0%;
+  background:#bbb;
+  transition: width .2s ease, background .2s ease;
+}
+.pw-bar.w1{ background:#ef4444; } /* débil   */
+.pw-bar.w2{ background:#f59e0b; } /* media   */
+.pw-bar.w3{ background:#84cc16; } /* buena   */
+.pw-bar.w4{ background:#16a34a; } /* fuerte  */
+
+/* Checklist */
+.pw-req{
+  list-style: none;
+  padding-left:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin: .5rem 0 0;
+}
+.pw-req li{
+  color: var(--text-soft);
+  font-weight:600;
+  display:flex;
+  gap:6px;
+  align-items:center;
+}
+.pw-req .dot{
+  width: 10px; height:10px; border-radius:999px; background:#ccc; display:inline-block;
+}
+.pw-req li.ok{ color:#14532d; }
+.pw-req li.ok .dot{ background:#16a34a; }
+
+/* Links */
+.link{ color: var(--borgona); }

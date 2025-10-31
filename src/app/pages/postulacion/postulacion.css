@@ -1,0 +1,192 @@
+/* --------- Design tokens --------- */
+:root{
+  color-scheme: light;                /* Fuerza controles del navegador en claro */
+  --borgona-50:#fff1f3;
+  --borgona-100:#ffdce2;
+  --borgona-200:#ffb7c2;
+  --borgona-300:#ff8aa2;
+  --borgona-400:#f05473;
+  --borgona-500:#b81e3c;  /* Borgoña corporativo */
+  --borgona-600:#971a33;
+  --borgona-700:#7a1429;
+
+  --text-strong:#1b1b1f;
+  --text-soft:#5b616b;
+  --bg:#fafafa;
+  --card:#ffffff;
+  --border:#e6e6ea;
+  --ring: 0 0 0 4px color-mix(in oklab, var(--borgona-500) 30%, transparent);
+
+  --radius-xl: 20px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.08), 0 24px 48px rgba(0,0,0,.10);
+
+  --transition-fast: 140ms ease;
+  --transition-slow: 260ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* --------- Layout & header --------- */
+body{ background: var(--bg); }
+
+header.text-center{ padding: 24px 0 8px; }
+.text-borgona{ color: var(--borgona-600) !important; }
+.muted-small{ color: var(--text-soft); font-size: .92rem; }
+
+/* --------- Card principal --------- */
+.card.border-borgona{
+  /* Ancla a claro incluso si Bootstrap intenta dark */
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #1b1b1f;
+  --bs-border-color: var(--border);
+  --bs-form-control-bg: #ffffff;
+  --bs-form-control-color: #1b1b1f;
+  --bs-input-group-addon-bg: #f6f6f6;
+  --bs-input-group-addon-border-color: var(--border);
+
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--borgona-500);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--card) 95%, white 5%), var(--card));
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  overflow: clip;
+}
+.card.border-borgona .card-body{
+  padding: clamp(18px, 2.8vw, 28px);
+}
+
+/* Separadores suaves */
+hr{
+  border: none;
+  border-top: 1px dashed color-mix(in oklab, var(--border) 70%, transparent);
+  margin: 18px 0 14px;
+}
+
+/* --------- Inputs modernos --------- */
+.input-custom{
+  height: 48px;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border);
+  background: #fff; /* fijo claro */
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  color: var(--text-strong);
+}
+.input-custom:focus{
+  border-color: color-mix(in oklab, var(--borgona-500) 60%, var(--border));
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* Textarea consistente */
+textarea.input-custom{ height:auto; min-height:128px; }
+
+/* Input groups con icono */
+.input-group-text{
+  border-radius: var(--radius-md) 0 0 var(--radius-md) !important;
+  border: 1px solid var(--border);
+  border-right: none;
+  background: #f6f6f6; /* claro */
+}
+.input-group .form-control{ border-left: none !important; }
+
+/* Estados de validación */
+.was-validated .form-control:invalid,
+.form-control.is-invalid{ border-color:#ef4444; }
+.was-validated .form-control:valid{ border-color:#22c55e; }
+.invalid-feedback{ font-size:.85rem; }
+
+/* --------- File input elegante --------- */
+input[type="file"].form-control{
+  padding: 10px 12px;
+  height: auto;
+  background: #fff; color: var(--text-strong);
+}
+input[type="file"].form-control::-webkit-file-upload-button,
+input[type="file"].form-control::file-selector-button{
+  border: 1px solid var(--border);
+  background: var(--bg);
+  border-radius: 10px;
+  margin-right: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+input[type="file"].form-control:hover::file-selector-button{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --------- Botones --------- */
+.btn-borgona{
+  --btn-bg: var(--borgona-600);
+  --btn-bg-hover: var(--borgona-700);
+  --btn-text: #ffffff;
+  border: none;
+  background: linear-gradient(180deg, var(--btn-bg), var(--borgona-600));
+  color: var(--btn-text);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+  box-shadow: 0 6px 14px color-mix(in oklab, var(--borgona-600) 25%, transparent);
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow), filter var(--transition-fast);
+}
+.btn-borgona:hover{
+  filter: brightness(2.02);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(180deg, var(--btn-bg-hover), var(--borgona-700));
+}
+.btn-borgona:active{ transform: translateY(0); }
+
+.btn-outline-secondary{
+  border-radius: 12px;
+  border-color: var(--border);
+  color: var(--text-strong);
+  background: transparent;
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+.btn-outline-secondary:hover{
+  border-color: color-mix(in oklab, var(--borgona-500) 40%, var(--border));
+  background: transparent;
+  color: #ff0000;
+  transform: translateY(-10px);
+}
+
+/* --------- Etiquetas y títulos --------- */
+.form-label{ font-weight: 600; color: var(--text-strong); }
+
+/* Secciones */
+section > h6{
+  font-size: .95rem;
+  letter-spacing:.3px;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+
+/* --------- Feedback global --------- */
+#formMessage{
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+  font-weight: 600;
+}
+#formMessage.success{
+  background: color-mix(in oklab, #22c55e 18%, var(--bg));
+  color: #14532d;
+  border:1px solid color-mix(in oklab, #22c55e 35%, transparent);
+}
+#formMessage.error{
+  background: color-mix(in oklab, #ef4444 18%, var(--bg));
+  color: #7f1d1d;
+  border:1px solid color-mix(in oklab, #ef4444 35%, transparent);
+}
+
+/* --------- Helpers --------- */
+.border-borgona{ border-color: color-mix(in oklab, var(--borgona-500) 40%, var(--border)) !important; }
+.input-group-text img{ filter: grayscale(.1) contrast(1.1); opacity:.9; }
+
+/* --------- Responsivo --------- */
+@media (max-width: 576px){
+  .card.border-borgona .card-body{ padding: 16px; }
+  .btn-borgona, .btn-outline-secondary{ width:100%; }
+}

@@ -436,13 +436,11 @@ html,body{
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   outline: none;
 }
-
 /* Asegura que los botones que envuelven las imágenes se vean accesibles */
 #investigadoresGrid article button.btn-link {
   text-decoration: none;
   color: inherit;
 }
-
 /* Si necesitas mostrar imágenes de distintas proporciones sin recortar (alternativa):
    descomenta la regla object-fit: contain; y ajusta background color si quieres letterbox.
 */

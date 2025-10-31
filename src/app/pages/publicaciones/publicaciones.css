@@ -1,0 +1,437 @@
+/* =============== Segmented control (tabs) =============== */
+
+:root{ --sticky-header: 56px; } /* o la altura real */
+
+.segmented{
+  display:inline-flex;
+  gap:0;
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:4px;
+  box-shadow:var(--shadow-sm);
+  margin-top:12px;
+}
+.segmented-item{
+  appearance:none;
+  border:0;
+  background:transparent;
+  padding:10px 16px;
+  border-radius:10px;
+  font-weight:700;
+  color:var(--text-soft);
+  transition:background .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
+  outline:none;
+}
+.segmented-item:hover{
+  background: color-mix(in oklab, var(--borgona-50) 60%, transparent);
+}
+.segmented-item.active,
+.segmented-item[aria-selected="true"]{
+  background: var(--borgona-600);
+  color:#fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08),
+              0 0 0 2px color-mix(in oklab, #fff 15%, var(--borgona-600));
+}
+.segmented-item:focus-visible{
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--borgona-500) 45%, transparent);
+}
+.segmented-item:active{ transform: translateY(.5px); }
+
+/* Micro-animación al cambiar vista */
+.fade-in{ animation: fadeIn .18s ease; }
+@keyframes fadeIn{
+  from{ opacity:0; transform: translateY(4px); }
+  to{ opacity:1; transform:none; }
+}
+
+/* =============== Superficie “borgoñizada” para Bootstrap =============== */
+.pub-surface{
+  --bs-primary: var(--borgona-600);
+  --bs-primary-rgb: 151,26,51;
+  --bs-link-color: var(--borgona-600);
+  --bs-link-hover-color: var(--borgona-700);
+}
+
+/* =============== Layout superior (toolbar) =============== */
+.publications-header,
+.pub-toolbar,
+#browseSection > .row{
+  max-width:1240px;        /* ajusta a 1140/1280 si prefieres */
+  margin-inline:auto;
+  padding-inline:12px;
+}
+
+.pub-toolbar{
+  display:grid;
+  grid-template-columns: 1fr auto; /* búsqueda crece, filtros ocupan lo necesario */
+  gap:12px;
+  align-items:center;
+}
+.pub-search{ min-width:240px; }
+.pub-search .form-control{ width:100%; min-height:44px; }
+
+.pub-filters-inline{
+  display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+}
+.pub-filters-inline .form-select{
+  width: clamp(160px, 18vw, 220px);
+  min-height:44px;
+}
+.pub-filters-inline .btn-group .btn{
+  min-height:44px;
+  padding:10px 14px;
+}
+
+/* Gutter del row un poco más compacto para ganar aire útil */
+#browseSection .row{ --bs-gutter-x: 1.25rem; }
+
+@media (max-width: 992px){
+  .pub-toolbar{ grid-template-columns: 1fr; }
+  .pub-filters-inline{ justify-content:flex-start; }
+}
+
+/* =============== Aside sticky estable (sin superponerse) =============== */
+:root{
+  /* Si tu navbar superior NO es fixed, deja 0; si lo es, pon su altura real */
+  --sticky-header: 0px;
+  --sticky-tabs: 52px; /* alto aprox. de los tabs (segmented) */
+  --sticky-gap: 12px;
+  --sticky-offset: calc(var(--sticky-header) + var(--sticky-tabs) + var(--sticky-gap));
+}
+
+.publications-aside{ contain: layout paint style; }
+
+.pub-sticky{
+  position: sticky;
+  top: var(--sticky-offset);
+  z-index: 3;
+  align-self: start;
+  background:#fff;
+  border-radius:16px;
+}
+
+.publications-aside .card-header{
+  font-weight:700;
+  color:var(--borgona-600);
+}
+
+@media (max-width: 991.98px){
+  .pub-sticky{ position: static; top:auto; }
+}
+
+/* =============== Tarjetas de publicaciones =============== */
+.pub-card{
+  border-radius:16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .22s ease;
+}
+.pub-card:hover{ transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,.12); }
+
+.pub-title{ line-height:1.25; margin-bottom:.25rem; }
+.btn-reset{ appearance:none; border:0; background:transparent; padding:0; }
+.pub-link{ color:var(--borgona-700); font-weight:800; text-align:left; cursor:pointer; }
+.pub-link:hover{ color:var(--borgona-600); text-decoration:underline; }
+
+.pub-meta{ color:#6b7280; }
+.pub-abstract{ color:#4b5563; }
+.pub-card .card-body > .mt-auto{ gap:10px; }
+
+/* Botón fantasma borgoña */
+.btn-ghost-borgona{
+  border:1px solid color-mix(in oklab, var(--borgona-600) 55%, #ffffff);
+  color:var(--borgona-700);
+  background:transparent;
+  font-weight:600;
+  border-radius:10px;
+}
+.btn-ghost-borgona:hover{
+  background: color-mix(in oklab, var(--borgona-50) 60%, transparent);
+  color: var(--borgona-700);
+}
+
+/* Badges de acceso */
+.badge-access{ border-radius:999px; font-weight:700; padding:.35rem .6rem; }
+.badge-access.open{
+  background: color-mix(in oklab, #16a34a 20%, #ffffff);
+  color:#14532d;
+  border:1px solid color-mix(in oklab, #16a34a 45%, transparent);
+}
+.badge-access.restricted{
+  background: color-mix(in oklab, #9ca3af 15%, #ffffff);
+  color:#374151;
+  border:1px solid color-mix(in oklab, #9ca3af 35%, transparent);
+}
+
+/* =============== Paginación borgoña compacta =============== */
+.pub-pagination .page-link{
+  color: var(--borgona-700);
+  border-color: var(--border);
+  padding: .4rem .65rem;
+}
+.pub-pagination .page-item.active .page-link{
+  background-color: var(--borgona-600);
+  border-color: var(--borgona-600);
+  color:#fff;
+}
+.pub-pagination .page-link:hover{
+  background: color-mix(in oklab, var(--borgona-50) 60%, transparent);
+  color: var(--borgona-700);
+}
+
+/* =============== Alturas consistentes de controles =============== */
+#browseSection .form-select,
+#browseSection .form-control{ min-height:44px; }
+
+/* --- Restaurar tu tab activo original --- */
+.segmented-item.active,
+.segmented-item[aria-selected="true"]{
+  /* el look que tenías: pill claro con borde sutil y texto borgoña */
+  background: linear-gradient(180deg, #fff, color-mix(in oklab, #fff 85%, var(--borgona-50)));
+  color: var(--borgona-600);
+  box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--borgona-500) 25%, transparent);
+}
+
+/* Hover del tab (corrige el typo de la ñ) */
+.segmented-item:hover{
+  background: color-mix(in oklab, var(--borgona-50) 60%, transparent);
+}
+
+/* --- Aside NO sticky (estático) --- */
+.pub-sticky{
+  position: static !important;
+  top: auto !important;
+  z-index: auto !important;
+  box-shadow: var(--shadow-sm); /* se ve bien sin flotar */
+}
+
+/* (opcional) si quieres dejarlo sticky sólo en desktop, comenta lo de arriba
+   y deja esto: */
+/*
+@media (min-width: 992px){
+  .pub-sticky{ position: sticky; top: 84px; z-index: 3; }
+}
+*/
+
+/* --- Saneamiento de variables con “ñ” por si quedaron en caché --- */
+:root{
+  /* alias defensivo: si alguien escribió --borgoña-50, que tome el correcto */
+  --borgoña-50: var(--borgona-50);
+  --borgoña-600: var(--borgona-600);
+  --borgoña-700: var(--borgona-700);
+}
+
+
+/* === Tabs (segmented) — ACTIVO en borgoña RGB === */
+.segmented .segmented-item.active,
+.segmented .segmented-item[aria-selected="true"]{
+  background: rgb(103, 49, 71);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,.08), inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+/* Hover del tab inactivo (suave, sólo tinte) */
+.segmented .segmented-item:not(.active):hover{
+  background: rgba(103, 49, 71, .08);
+  color: rgb(103, 49, 71);
+}
+
+/* === Paginación borgoña y legible === */
+.pagination.pub-pagination .page-link{
+  color: rgb(103, 49, 71);
+  border-color: var(--border);
+  min-width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: .4rem .65rem;
+}
+
+/* ¡AQUÍ EL FIX! el activo gana a Bootstrap y no queda blanco */
+.pagination.pub-pagination .page-item.active .page-link{
+  background: rgb(103, 49, 71) !important;
+  border-color: rgb(103, 49, 71) !important;
+  color: #fff !important;
+}
+
+/* Disabled más tenue */
+.pagination.pub-pagination .page-item.disabled .page-link{
+  color: #9aa0a6;
+  background: #f3f4f6;
+  border-color: var(--border);
+}
+
+/* Hover general */
+.pagination.pub-pagination .page-link:hover{
+  background: rgba(103, 49, 71, .08);
+  color: rgb(103, 49, 71);
+}
+/* === Botón fantasma borgoña (visible y clickeable) === */
+.btn-ghost-borgona{
+  --borgona-rgb: 103, 49, 71;
+  color: rgb(var(--borgona-rgb));
+  border: 1.5px solid rgba(var(--borgona-rgb), .55);
+  background: transparent;
+  border-radius: 12px;
+  font-weight: 700;
+  padding: .45rem .8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, color .18s ease;
+  text-decoration: none;          /* para <a> */
+  display: inline-flex;           /* centrado vertical bonito */
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost-borgona:hover,
+.btn-ghost-borgona:focus{
+  background: rgba(var(--borgona-rgb), .10);
+  border-color: rgba(var(--borgona-rgb), .70);
+  color: rgb(var(--borgona-rgb));
+  box-shadow: 0 0 0 3px rgba(var(--borgona-rgb), .18);
+  text-decoration: none;
+}
+
+.btn-ghost-borgona:active{
+  background: rgba(var(--borgona-rgb), .16);
+  border-color: rgba(var(--borgona-rgb), .90);
+}
+
+/* Por si Bootstrap intenta recolorearlo como .btn-link o similares */
+a.btn-ghost-borgona,
+button.btn-ghost-borgona{
+  color: rgb(var(--borgona-rgb)) !important;
+}
+
+
+/* Tokens borgoña por RGB */
+:root{ --borgona-rgb: 103,49,71; }
+
+/* Secciones */
+.form-section{ margin-top: .25rem; padding-top: .75rem; }
+.form-section + .form-section{ border-top: 1px dashed var(--border); margin-top: 1rem; padding-top: 1.25rem; }
+.form-section__title{
+  font-weight: 800;
+  color: rgb(var(--borgona-rgb));
+  letter-spacing:.2px;
+  margin: 0 0 .25rem 2px;
+}
+
+/* Contadores en inputs/textarea */
+.with-counter{ position: relative; }
+.counter{
+  position: absolute; right: 10px; bottom: 8px;
+  font-size: .78rem; color: var(--text-soft);
+  background: #fff; padding: 0 .25rem; border-radius: 6px;
+}
+
+/* Dropzones */
+.dropzone{
+  display: grid; place-items: center; text-align: center;
+  border: 1.5px dashed rgba(var(--borgona-rgb), .45);
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 12px;
+  transition: border-color .18s ease, background .18s ease, box-shadow .18s ease;
+  cursor: pointer;
+  min-height: 112px;
+}
+.dropzone--soft{ border-color: #ddd; }
+.dropzone .dz-icon{ font-size: 24px; line-height: 1; }
+.dropzone .dz-text{ margin-top: 6px; font-size: .95rem; }
+.dropzone:hover{
+  border-color: rgba(var(--borgona-rgb), .75);
+  background: rgba(var(--borgona-rgb), .04);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
+}
+.dropzone.dragover{
+  border-color: rgba(var(--borgona-rgb), 1);
+  background: rgba(var(--borgona-rgb), .08);
+}
+
+/* Ocultar inputs reales de archivo pero conservando accesibilidad */
+.visually-hidden{
+  position: absolute !important; inline-size:1px; block-size:1px;
+  padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+}
+
+/* Barra de acciones pegada al final de la tarjeta */
+.actions-bar{
+  position: sticky; bottom: 0;
+  display: flex; align-items: center; gap: 12px;
+  background: linear-gradient(#fff, #fff);
+  border-top: 1px solid var(--border);
+  padding: 12px 0 0;
+  margin-top: 12px;
+  z-index: 1;
+}
+
+/* Botón borgoña existente, por si quieres reforzar contraste */
+.btn-borgona{
+  background: rgb(var(--borgona-rgb));
+  border: 1px solid rgb(var(--borgona-rgb));
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 700;
+}
+.btn-borgona:hover{ filter: brightness(1.03); }
+
+/* Ajuste min-height para inputs aquí también */
+#submitSection .form-select, #submitSection .form-control{ min-height: 44px; }
+
+
+/* ===== Ancho consistente para ambas vistas ===== */
+:root{
+  /* cambia este valor si quieres otro ancho global */
+  --content-max: 1240px;
+}
+
+/* Encabezado (título + tabs) */
+.publications-header{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+/* Toolbar de la vista "Ver publicaciones" */
+.pub-toolbar{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+/* Grid principal de "Ver publicaciones" */
+#browseSection > .row{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+/* Bloque superior (título + descripción) de "Solicitar Publicación" */
+#submitSection > .d-flex{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+/* Card del formulario de "Solicitar Publicación" */
+#submitSection .publication-form{
+  max-width: var(--content-max);
+  margin-inline: auto;
+  /* dejamos padding del card-body tal cual para no aplastar el contenido */
+  padding-inline: 12px;
+}
+
+/* En móviles dejamos respirar los bordes de ambas vistas */
+@media (max-width: 576px){
+  .publications-header,
+  .pub-toolbar,
+  #browseSection > .row,
+  #submitSection > .d-flex,
+  #submitSection .publication-form{
+    padding-inline: 16px;
+  }
+}

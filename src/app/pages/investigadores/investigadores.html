@@ -1,269 +1,333 @@
-  <main class="container mt-5 mb-5">
-    <header class="mb-4 text-center">
-      <h2 class="text-borgona">Conoce a nuestros investigadores</h2>
-      <p class="muted-small mb-0">Haz clic en la foto para ver información de contacto y descargar el CV.</p>
-    </header>
+<main class="container mt-5 mb-5">
+  <header class="mb-4 text-center">
+    <h2 class="text-borgona">Conoce a nuestros investigadores</h2>
+    <p class="muted-small mb-0">Haz clic en la foto para ver información de contacto y descargar el CV.</p>
+  </header>
 
-    <!-- Grid de investigadores -->
-    <section class="row g-4" id="investigadoresGrid" aria-live="polite">
-      <!-- Investigador 1 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest1" aria-controls="modalInvest1" aria-label="Abrir ficha de Felipe García">
-            <img src="../../../assets/img/felipe.jpg" class="card-img-top" alt="Foto Felipe García" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">Felipe García</h5>
+  <!-- Grid de investigadores -->
+  <section class="row g-4" id="investigadoresGrid" aria-live="polite">
+
+    <!-- Investigador 1 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest1"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de Felipe García"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/felipe.jpg" alt="Foto Felipe García" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest1"
+               aria-label="Ver contacto de Felipe García">Ver contacto</a>
+            <a class="btn-ghost" href="assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto-pro.svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de Felipe García">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">Felipe García</h5>
+          <p class="role mb-0">Investigador Senior</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Investigador 2 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest2"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de Ana Martínez"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/mujer1.png" alt="Foto Ana Martínez" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest2"
+               aria-label="Ver contacto de Ana Martínez">Ver contacto</a>
+            <a class="btn-ghost" href="assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto.svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de Ana Martínez">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">Ana Martínez</h5>
+          <p class="role mb-0">Investigadora</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Investigador 3 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest3"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de José Rodríguez"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/jose.png" alt="Foto José Rodríguez" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest3"
+               aria-label="Ver contacto de José Rodríguez">Ver contacto</a>
+            <a class="btn-ghost" href="assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de José Rodríguez">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">José Rodríguez</h5>
+          <p class="role mb-0">Investigador Asociado</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Investigador 4 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest4"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de Pilar Sánchez"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/mujerr2.png" alt="Foto Pilar Sánchez" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest4"
+               aria-label="Ver contacto de Pilar Sánchez">Ver contacto</a>
+            <a class="btn-ghost" href="assets/img/SCT-2508-RHES-_-CV-_-7 (1).svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de Pilar Sánchez">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">Pilar Sánchez</h5>
+          <p class="role mb-0">Investigadora</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Investigador 5 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest5"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de Luis Herrera"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/wey3.png" alt="Foto Luis Herrera" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest5"
+               aria-label="Ver contacto de Luis Herrera">Ver contacto</a>
+            <a class="btn-ghost" href="assets/cv/SCT-2508-RHES-_-CV-_-7.svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de Luis Herrera">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">Luis Herrera</h5>
+          <p class="role mb-0">Investigador Junior</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Investigador 6 -->
+    <article class="col-sm-6 col-md-4">
+      <div class="card h-100 border-borgona invest-card" data-bs-theme="light">
+        <div class="invest-media"
+             data-bs-toggle="modal" data-bs-target="#modalInvest6"
+             tabindex="0" role="button"
+             aria-label="Abrir ficha de Carmen López"
+             onkeydown="if(event.key==='Enter'||event.key===' '){ this.click(); }">
+          <img src="assets/img/mujer3.png" alt="Foto Carmen López" />
+          <div class="invest-overlay">
+            <a class="btn-ghost" href="#" data-bs-toggle="modal" data-bs-target="#modalInvest6"
+               aria-label="Ver contacto de Carmen López">Ver contacto</a>
+            <a class="btn-ghost" href="assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" target="_blank" rel="noopener"
+               aria-label="Ver CV de Carmen López">Ver CV</a>
+          </div>
+        </div>
+        <div class="invest-info">
+          <h5 class="name mb-0">Carmen López</h5>
+          <p class="role mb-0">Investigadora</p>
+        </div>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- =======================
+     Modales de investigadores
+     ======================= -->
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modalInvest1" tabindex="-1" aria-labelledby="modalInvest1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest1Label">Felipe García</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/felipe.jpg" alt="Foto Felipe García" class="img-fluid rounded mb-2">
             <p class="muted-small mb-0">Investigador Senior</p>
           </div>
-        </div>
-      </article>
-
-      <!-- Investigador 2 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest2" aria-controls="modalInvest2" aria-label="Abrir ficha de Ana Martínez">
-            <img src="../../../assets/img/mujer1.png" class="card-img-top" alt="Foto Ana Martínez" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">Ana Martínez</h5>
-            <p class="muted-small mb-0">Investigadora</p>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> felipe.garcia@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 1234 5678</p>
+            <p><strong>Institución:</strong> Universidad Estatal</p>
+            <p class="mt-2"><strong>Resumen:</strong> Experto en energías renovables y evaluación de impacto social en zonas rurales.</p>
+            <div class="mt-3">
+              <a href="assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto-pro.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Investigador 3 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest3" aria-controls="modalInvest3" aria-label="Abrir ficha de José Rodríguez">
-            <img src="../../../assets/img/jose.png" class="card-img-top" alt="Foto José Rodríguez" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">José Rodríguez</h5>
+<!-- Modal 2 -->
+<div class="modal fade" id="modalInvest2" tabindex="-1" aria-labelledby="modalInvest2Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest2Label">Ana Martínez</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/mujer1.png" alt="Foto Ana Martínez" class="img-fluid rounded mb-2">
+            <p class="muted-small mb-0">Investigadora</p>
+          </div>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> ana.martinez@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 2345 6789</p>
+            <p><strong>Institución:</strong> Instituto Tecnológico</p>
+            <p class="mt-2"><strong>Resumen:</strong> Especialista en educación y desarrollo de software educativo para poblaciones vulnerables.</p>
+            <div class="mt-3">
+              <a href="assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modalInvest3" tabindex="-1" aria-labelledby="modalInvest3Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest3Label">José Rodríguez</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/jose.png" alt="Foto José Rodríguez" class="img-fluid rounded mb-2">
             <p class="muted-small mb-0">Investigador Asociado</p>
           </div>
-        </div>
-      </article>
-
-      <!-- Investigador 4 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest4" aria-controls="modalInvest4" aria-label="Abrir ficha de Pilar Sánchez">
-            <img src="../../../assets/img/mujerr2.png" class="card-img-top" alt="Foto Pilar Sánchez" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">Pilar Sánchez</h5>
-            <p class="muted-small mb-0">Investigadora</p>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> jose.rodriguez@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 3456 7890</p>
+            <p><strong>Institución:</strong> Centro de Investigación</p>
+            <p class="mt-2"><strong>Resumen:</strong> Líneas de trabajo en análisis de datos y evaluación educativa.</p>
+            <div class="mt-3">
+              <a href="assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
           </div>
         </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Investigador 5 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest5" aria-controls="modalInvest5" aria-label="Abrir ficha de Luis Herrera">
-            <img src="../../../assets/img/wey3.png" class="card-img-top" alt="Foto Luis Herrera" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">Luis Herrera</h5>
+<!-- Modal 4 -->
+<div class="modal fade" id="modalInvest4" tabindex="-1" aria-labelledby="modalInvest4Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest4Label">Pilar Sánchez</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/mujerr2.png" alt="Foto Pilar Sánchez" class="img-fluid rounded mb-2">
+            <p class="muted-small mb-0">Investigadora</p>
+          </div>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> pilar.sanchez@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 4567 8901</p>
+            <p><strong>Institución:</strong> Universidad Nacional</p>
+            <p class="mt-2"><strong>Resumen:</strong> Experiencia en políticas públicas y evaluación de programas sociales.</p>
+            <div class="mt-3">
+              <a href="assets/img/SCT-2508-RHES-_-CV-_-7 (1).svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modalInvest5" tabindex="-1" aria-labelledby="modalInvest5Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest5Label">Luis Herrera</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/wey3.png" alt="Foto Luis Herrera" class="img-fluid rounded mb-2">
             <p class="muted-small mb-0">Investigador Junior</p>
           </div>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> luis.herrera@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 5678 9012</p>
+            <p><strong>Institución:</strong> Instituto Regional</p>
+            <p class="mt-2"><strong>Resumen:</strong> Enfoque en análisis cuantitativo y visualización de datos.</p>
+            <div class="mt-3">
+              <a href="assets/cv/SCT-2508-RHES-_-CV-_-7.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
         </div>
-      </article>
+      </div>
+    </div>
+  </div>
+</div>
 
-      <!-- Investigador 6 -->
-      <article class="col-sm-6 col-md-4">
-        <div class="card h-100 border-borgona">
-          <button class="btn btn-link p-0 text-start" type="button" data-bs-toggle="modal" data-bs-target="#modalInvest6" aria-controls="modalInvest6" aria-label="Abrir ficha de Carmen López">
-            <img src="../../../assets/img/mujer3.png" class="card-img-top" alt="Foto Carmen López" style="object-fit:cover; height:220px;">
-          </button>
-          <div class="card-body text-center">
-            <h5 class="card-title mb-0">Carmen López</h5>
+<!-- Modal 6 -->
+<div class="modal fade" id="modalInvest6" tabindex="-1" aria-labelledby="modalInvest6Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content border-borgona" data-bs-theme="light">
+      <div class="modal-header">
+        <h5 class="modal-title text-borgona" id="modalInvest6Label">Carmen López</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-4 text-center">
+            <img src="assets/img/mujer3.png" alt="Foto Carmen López" class="img-fluid rounded mb-2">
             <p class="muted-small mb-0">Investigadora</p>
           </div>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- Modales de investigadores -->
-
-  <!-- Modal 1 -->
-  <div class="modal fade" id="modalInvest1" tabindex="-1" aria-labelledby="modalInvest1Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest1Label">Felipe García</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/felipe.jpg" alt="Foto Felipe García" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigador Senior</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> felipe.garcia@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 1234 5678</p>
-              <p><strong>Institución:</strong> Universidad Estatal</p>
-              <p class="mt-2"><strong>Resumen:</strong> Experto en energías renovables y evaluación de impacto social en zonas rurales.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto-pro.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
+          <div class="col-md-8">
+            <p><strong>Correo:</strong> carmen.lopez@SIMEX.mx</p>
+            <p><strong>Teléfono:</strong> (55) 6789 0123</p>
+            <p><strong>Institución:</strong> Centro Académico</p>
+            <p class="mt-2"><strong>Resumen:</strong> Investigación en pedagogía y diseño instruccional.</p>
+            <div class="mt-3">
+              <a href="assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
+              <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <!-- Modal 2 -->
-  <div class="modal fade" id="modalInvest2" tabindex="-1" aria-labelledby="modalInvest2Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest2Label">Ana Martínez</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/mujer1.png" alt="Foto Ana Martínez" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigadora</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> ana.martinez@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 2345 6789</p>
-              <p><strong>Institución:</strong> Instituto Tecnológico</p>
-              <p class="mt-2"><strong>Resumen:</strong> Especialista en educación y desarrollo de software educativo para poblaciones vulnerables.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/ejemplo-de-cv-sin-experiencia-sin-foto.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 3 -->
-  <div class="modal fade" id="modalInvest3" tabindex="-1" aria-labelledby="modalInvest3Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest3Label">José Rodríguez</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/jose.png" alt="Foto José Rodríguez" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigador Asociado</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> jose.rodriguez@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 3456 7890</p>
-              <p><strong>Institución:</strong> Centro de Investigación</p>
-              <p class="mt-2"><strong>Resumen:</strong> Líneas de trabajo en análisis de datos y evaluación educativa.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 4 -->
-  <div class="modal fade" id="modalInvest4" tabindex="-1" aria-labelledby="modalInvest4Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest4Label">Pilar Sánchez</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/mujerr2.png" alt="Foto Pilar Sánchez" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigadora</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> pilar.sanchez@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 4567 8901</p>
-              <p><strong>Institución:</strong> Universidad Nacional</p>
-              <p class="mt-2"><strong>Resumen:</strong> Experiencia en políticas públicas y evaluación de programas sociales.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/SCT-2508-RHES-_-CV-_-7 (1).svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 5 -->
-  <div class="modal fade" id="modalInvest5" tabindex="-1" aria-labelledby="modalInvest5Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest5Label">Luis Herrera</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/wey3.png" alt="Foto Luis Herrera" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigador Junior</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> luis.herrera@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 5678 9012</p>
-              <p><strong>Institución:</strong> Instituto Regional</p>
-              <p class="mt-2"><strong>Resumen:</strong> Enfoque en análisis cuantitativo y visualización de datos.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/SCT-2508-RHES-_-CV-_-7.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 6 -->
-  <div class="modal fade" id="modalInvest6" tabindex="-1" aria-labelledby="modalInvest6Label" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content border-borgona">
-        <div class="modal-header">
-          <h5 class="modal-title text-borgona" id="modalInvest6Label">Carmen López</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-        </div>
-        <div class="modal-body">
-          <div class="row g-3">
-            <div class="col-md-4 text-center">
-              <img src="../../../assets/img/mujer3.png" alt="Foto Carmen López" class="img-fluid rounded mb-2">
-              <p class="muted-small mb-0">Investigadora</p>
-            </div>
-            <div class="col-md-8">
-              <p><strong>Correo:</strong> carmen.lopez@SIMEX.mx</p>
-              <p><strong>Teléfono:</strong> (55) 6789 0123</p>
-              <p><strong>Institución:</strong> Centro Académico</p>
-              <p class="mt-2"><strong>Resumen:</strong> Investigación en pedagogía y diseño instruccional.</p>
-              <div class="mt-3">
-                <a href="../../../assets/cv/SCT-2508-_-RHES-_-CV-_-2.svg" class="btn btn-borgona me-2" target="_blank" rel="noopener">Ver CV (PDF)</a>
-                <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>

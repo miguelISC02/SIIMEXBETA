@@ -1,38 +1,112 @@
-<!-- src/app/shared/navbar/navbar.html -->
+<!-- src/app/shared/navbar/navbar.component.html -->
 <ng-container *ngIf="mostrarNavbar">
-  <!-- Barra decorativa superior (opcional) -->
+  <!-- Barra decorativa superior (opcional, ya estilizada en tu global) -->
   <div class="header-bar"></div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-borgona px-4" role="navigation" aria-label="Principal">
+  <nav #navbarEl class="navbar navbar-dark bg-borgona px-3 sticky-top" role="navigation" aria-label="Principal">
     <a class="navbar-brand fw-bold text-white" routerLink="/landing">COMECyT</a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
-            aria-controls="menuNav" aria-expanded="false" aria-label="Alternar navegación">
+    <!-- Botón que abre el menú en móvil -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuNav"
+      aria-controls="menuNav" aria-label="Abrir menú">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="menuNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/perfil" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Perfil</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/convocatorias" routerLinkActive="active">Convocatorias</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/investigadores" routerLinkActive="active">Investigadores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/publicaciones" routerLinkActive="active">Publicaciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" routerLink="/contacto" routerLinkActive="active">Contacto</a>
-        </li>
-        <li class="nav-item">
-          <!-- temporal: navega a login; luego lo cambiamos a logout real -->
-          <a class="nav-link text-white" routerLink="/login" routerLinkActive="active">Cerrar sesión</a>
-        </li>
-      </ul>
+    <!-- Menú offcanvas (derecha) -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menuNav" aria-labelledby="menuNavLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="menuNavLabel">Menú</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"></button>
+      </div>
+
+      <div class="offcanvas-body d-flex flex-column gap-3">
+
+        <!-- Header de menú -->
+        <div class="menu-intro">
+          <h5 class="mb-1">Explora COMECyT</h5>
+          <p class="m-0 muted-small">Navega por el sistema y continúa tu postulación.</p>
+        </div>
+
+        <hr class="menu-sep my-2" />
+
+        <!-- Navegación principal -->
+        <ul class="navbar-nav gap-1">
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/landing" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }" #rlaPerfil="routerLinkActive"
+              [attr.aria-current]="rlaPerfil.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">🏠</span>
+              Pagina principal
+            </a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/perfil" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }" #rlaPerfil="routerLinkActive"
+              [attr.aria-current]="rlaPerfil.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">👤</span>
+              Perfil
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/convocatorias" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }" #rlaConv="routerLinkActive"
+              [attr.aria-current]="rlaConv.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">📜</span>
+              Convocatorias
+              <span class="badge-new" *ngIf="true" aria-label="Nuevas">Nuevo</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/investigadores" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }" #rlaInv="routerLinkActive"
+              [attr.aria-current]="rlaInv.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">🔬</span>
+              Investigadores
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/publicaciones" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: false }" #rlaPub="routerLinkActive"
+              [attr.aria-current]="rlaPub.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">📚</span>
+              Publicaciones
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-pill" routerLink="/contacto" routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }" #rlaCon="routerLinkActive"
+              [attr.aria-current]="rlaCon.isActive ? 'page' : null" data-bs-dismiss="offcanvas">
+              <span class="nav-ico" aria-hidden="true">✉️</span>
+              Contacto
+            </a>
+          </li>
+        </ul>
+
+        <hr class="menu-sep my-2" />
+
+        <!-- CTA / sección secundaria -->
+        <div class="d-grid gap-2">
+          <a routerLink="/convocatorias" class="btn btn-cta" data-bs-dismiss="offcanvas">
+            Postularme ahora
+          </a>
+          <a routerLink="/login" class="nav-link text-white text-decoration-none" data-bs-dismiss="offcanvas">
+            Cerrar sesión
+          </a>
+        </div>
+
+        <!-- Footer del offcanvas -->
+        <div class="menu-foot mt-auto muted-small">
+          © COMECyT · Gobierno del Estado de México
+        </div>
+      </div>
     </div>
   </nav>
 </ng-container>

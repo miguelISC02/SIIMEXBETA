@@ -1,4 +1,220 @@
-.nav-link.active {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+/* ===== NAVBAR ===== */
+.navbar.bg-borgona{
+  background: linear-gradient(180deg, var(--borgona) 0%, var(--borgona-dark) 100%);
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,.12);
+  transition: box-shadow .18s ease, background .18s ease;
+  will-change: box-shadow;
 }
+.navbar.bg-borgona.scrolled{
+  box-shadow: 0 8px 24px rgba(0,0,0,.18), inset 0 -1px 0 rgba(255,255,255,.10);
+}
+.sticky-top{ top:0; z-index:1030; }
+
+/* Links con subrayado que aparece/desaparece */
+.navbar .nav-link{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  gap:.25rem;
+  padding:.35rem .45rem .45rem;
+  outline:none;
+  transition:color .12s ease, transform .12s ease;
+}
+.navbar .nav-link::after{
+  content:"";
+  position:absolute; left:.35rem; right:.35rem; bottom:.15rem;
+  height:2px; background:var(--color-dorado);
+  transform:scaleX(0); transform-origin:left center;
+  transition:transform .22s ease; opacity:.95;
+}
+@media (hover:hover) and (pointer:fine){
+  .navbar .nav-link:hover{ transform:translateY(-1px); }
+  .navbar .nav-link:hover::after,
+  .navbar .nav-link.active::after{ transform:scaleX(1); }
+}
+.navbar .nav-link:focus-visible{
+  outline:2px solid #fff; outline-offset:2px; text-decoration:none;
+}
+
+/* CTA dorado (usa el mismo en navbar y offcanvas) */
+.btn-cta{
+  display:inline-block; text-align:center;
+  font-weight:700; border:none; border-radius:999px;
+  padding:.45rem .9rem;
+  background:var(--color-dorado); color:#3b2b12;
+  text-decoration:none;
+  transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+}
+.btn-cta:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.12); filter:saturate(1.05); }
+
+/* ===== OFFCANVAS (abre y cierra con fade+slide) ===== */
+.offcanvas{
+  --bs-offcanvas-width:330px;
+  background:var(--borgona) !important;
+  color:#fff;
+  opacity:0;
+  transform:translateX(12px);
+  transition:opacity .22s ease, transform .22s ease;
+}
+/* Bootstrap añade estas clases durante la animación */
+.offcanvas.showing{ opacity:1; transform:translateX(0); }
+.offcanvas.hiding { opacity:0; transform:translateX(12px); }
+/* Estado estable (abierto) */
+.offcanvas.show{ opacity:1; transform:translateX(0); }
+
+/* Backdrop con blur y fade simétrico */
+.offcanvas-backdrop{
+  transition:opacity .22s ease, backdrop-filter .22s ease;
+}
+.offcanvas-backdrop.show{
+  opacity:.35;
+  backdrop-filter:blur(2px);
+}
+
+/* Contenido “premium” del panel */
+.menu-intro h5{ font-weight:700; }
+.menu-sep{ border:none; height:1px; background:rgba(255,255,255,.24); }
+
+.nav-pill{
+  position:relative; display:inline-flex; align-items:center; gap:.5rem;
+  padding:.5rem .75rem; border-radius:10px;
+  transition:background-color .18s ease, transform .12s ease;
+}
+.nav-pill:hover{ background:rgba(255,255,255,.06); transform:translateX(2px); }
+.nav-pill.active{
+  background:rgba(255,255,255,.14);
+  font-weight:600;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.18);
+}
+
+/* Stagger SOLO al abrir */
+.offcanvas .nav-item{ will-change:transform,opacity; }
+.offcanvas.showing .nav-item{
+  opacity:0; transform:translateY(6px);
+  animation:fadeUp .28s ease forwards;
+}
+.offcanvas.showing .nav-item:nth-child(1){ animation-delay:60ms; }
+.offcanvas.showing .nav-item:nth-child(2){ animation-delay:110ms; }
+.offcanvas.showing .nav-item:nth-child(3){ animation-delay:160ms; }
+.offcanvas.showing .nav-item:nth-child(4){ animation-delay:210ms; }
+.offcanvas.showing .nav-item:nth-child(5){ animation-delay:260ms; }
+.offcanvas.showing .nav-item:nth-child(6){ animation-delay:310ms; }
+/* Al cerrar evitamos “salida rara” de los items */
+.offcanvas.hiding .nav-item{
+  animation:none; opacity:0; transform:translateY(6px);
+}
+
+@keyframes fadeUp{ to{ opacity:1; transform:translateY(0); } }
+
+/* Badge “Nuevo” */
+.badge-new{
+  margin-left:.5rem; font-size:.75rem; padding:.1rem .4rem;
+  border-radius:999px; background:var(--color-dorado); color:#2b1e0a;
+}
+
+/* Legibilidad extra en panel */
+.offcanvas .muted-small{ color:#fff !important; }
+.offcanvas .menu-foot,
+.offcanvas .menu-intro p{ opacity:1 !important; }
+.offcanvas, .offcanvas .nav-link, .offcanvas .text-white{ color:#fff !important; }
+.offcanvas .menu-foot{
+  color:rgba(253,253,253,.88);
+  text-shadow:0 1px 0 rgba(0,0,0,.08);
+  line-height:1.25; letter-spacing:.1px; padding-bottom:.75rem;
+}
+
+/* ===== DARK MODE ===== */
+@media (prefers-color-scheme: dark){
+  .navbar.bg-borgona{ box-shadow:0 2px 10px rgba(0,0,0,.4); }
+  .offcanvas.text-bg-dark .nav-link{ color:#fff !important; opacity:.95; }
+}
+
+/* ===== ACCESIBILIDAD: reduce motion ===== */
+@media (prefers-reduced-motion: reduce){
+  .offcanvas,
+  .offcanvas-backdrop,
+  .navbar .nav-link::after,
+  .nav-pill,
+  .offcanvas.showing .nav-item{
+    transition:none !important;
+    animation:none !important;
+    transform:none !important;
+  }
+}
+/* ===== Timings & motion tuning ===== */
+:root{
+  --oc-duration: 380ms;           /* antes 180–220ms */
+  --oc-ease: cubic-bezier(.21,.99,.29,1); /* easeOut suave, sin “rebote raro” */
+  --oc-translate: 24px;           /* antes 12px */
+  --oc-stagger: 90ms;             /* antes 50–60ms */
+  --oc-backdrop: 420ms;           /* un poco más largo que el panel */
+  --oc-backdrop-opacity: .45;     /* más notoria */
+  --oc-backdrop-blur: 3px;
+}
+
+/* ===== OFFCANVAS: abre/cierra con más tiempo y distancia ===== */
+.offcanvas{
+  --bs-offcanvas-width: 330px;
+  background: var(--borgona) !important;
+  color:#fff;
+  opacity: 0;
+  transform: translateX(var(--oc-translate));
+  transition:
+    opacity var(--oc-duration) var(--oc-ease),
+    transform var(--oc-duration) var(--oc-ease);
+  will-change: opacity, transform;
+}
+
+/* Bootstrap aplica estas clases durante la animación */
+.offcanvas.showing{ opacity:1; transform:translateX(0); }
+.offcanvas.hiding { opacity:0; transform:translateX(var(--oc-translate)); }
+/* Estado estable abierto */
+.offcanvas.show{ opacity:1; transform:translateX(0); }
+
+/* ===== Backdrop: fade + blur más lento y notorio ===== */
+.offcanvas-backdrop{
+  transition:
+    opacity var(--oc-backdrop) var(--oc-ease),
+    backdrop-filter var(--oc-backdrop) var(--oc-ease);
+}
+.offcanvas-backdrop.show{
+  opacity: var(--oc-backdrop-opacity);
+  backdrop-filter: blur(var(--oc-backdrop-blur));
+}
+
+/* ===== Stagger de items: duraciones y delays más largos ===== */
+.offcanvas .nav-item{ will-change: transform, opacity; }
+.offcanvas.showing .nav-item{
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeUp var(--oc-duration) var(--oc-ease) forwards;
+}
+.offcanvas.showing .nav-item:nth-child(1){ animation-delay: calc(var(--oc-stagger) * 1); }
+.offcanvas.showing .nav-item:nth-child(2){ animation-delay: calc(var(--oc-stagger) * 2); }
+.offcanvas.showing .nav-item:nth-child(3){ animation-delay: calc(var(--oc-stagger) * 3); }
+.offcanvas.showing .nav-item:nth-child(4){ animation-delay: calc(var(--oc-stagger) * 4); }
+.offcanvas.showing .nav-item:nth-child(5){ animation-delay: calc(var(--oc-stagger) * 5); }
+.offcanvas.showing .nav-item:nth-child(6){ animation-delay: calc(var(--oc-stagger) * 6); }
+
+/* Al cerrar: sin “salida rara” de los items */
+.offcanvas.hiding .nav-item{
+  animation: none; opacity: 0; transform: translateY(8px);
+}
+
+@keyframes fadeUp{ to { opacity:1; transform:translateY(0); } }
+
+/* ===== Accesibilidad: reduce motion ===== */
+@media (prefers-reduced-motion: reduce){
+  :root{
+    --oc-duration: 0ms;
+    --oc-stagger: 0ms;
+    --oc-backdrop: 0ms;
+  }
+  .offcanvas, .offcanvas-backdrop, .offcanvas.showing .nav-item{
+    transition: none !important; animation: none !important; transform: none !important;
+  }
+}
+.app-navbar{ display:grid; grid-template-columns:auto 1fr auto; align-items:center; min-height:56px; }
+.nav-center{ text-align:center; overflow:hidden; }
+.nav-section-title{ display:inline-block; max-width:80vw; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-weight:700; letter-spacing:.2px; }
+@media (max-width:576px){ .nav-section-title{ max-width:60vw; font-size:1rem; } }
