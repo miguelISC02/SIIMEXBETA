@@ -1,7 +1,9 @@
 <div class="container mt-4">
   <div class="card p-4 shadow form-card">
     <h2 class="text-center text-borgona mb-1">Registro en SIIMEX</h2>
-    <p class="text-center text-muted mb-4">Crea tu cuenta en menos de 2 minutos. Campos marcados con * son obligatorios.</p>
+    <p class="text-center text-muted mb-4">
+      Crea tu cuenta en menos de 2 minutos. Campos marcados con * son obligatorios.
+    </p>
 
     <form [formGroup]="form" (ngSubmit)="submit()" novalidate aria-describedby="formHelp">
       <!-- Fila 1 -->
@@ -80,54 +82,75 @@
         </div>
       </div>
 
-      <!-- Fila 4 -->
-      <div class="row g-3 mt-1">
-        <div class="col-md-6">
-          <label for="curp" class="form-label">CURP</label>
-          <div class="input-group has-icon">
-            <span class="input-group-text"><i class="ico">🆔</i></span>
-            <input data-control="curp" id="curp" type="text" class="form-control"
-                   formControlName="curp" placeholder="AAAA001122HDFRRN09" />
-          </div>
-          <div class="field-help" *ngIf="f.curp.touched && f.curp.errors?.['curp']">
-            CURP con formato inválido.
-          </div>
-        </div>
+<!-- Fila 4: Contraseña + Confirmar contraseña (misma fila) -->
+<div class="row g-3 mt-1">
+  <div class="col-md-6 order-md-1">
+    <label for="pwd" class="form-label">Contraseña *</label>
+    <div class="input-group has-icon">
+      <span class="input-group-text"><i class="ico">🔒</i></span>
+      <input data-control="password" [type]="pwdVisible() ? 'text' : 'password'"
+             id="pwd" class="form-control" formControlName="password" autocomplete="new-password" />
+      <button class="btn btn-outline-secondary toggle-visibility" type="button"
+              (click)="pwdVisible.set(!pwdVisible())" aria-label="Mostrar/ocultar contraseña">
+        {{ pwdVisible() ? 'Ocultar' : 'Mostrar' }}
+      </button>
+    </div>
+    <div class="pwd-meter" [attr.data-level]="passwordStrength()"></div>
+    <div class="field-help" *ngIf="f.password.touched && f.password.errors?.['weak']">
+      Mínimo 8 caracteres, mayúsculas/minúsculas y números.
+    </div>
+  </div>
 
-        <div class="col-md-6">
-          <label for="pwd" class="form-label">Contraseña *</label>
-          <div class="input-group has-icon">
-            <span class="input-group-text"><i class="ico">🔒</i></span>
-            <input data-control="password" [type]="pwdVisible() ? 'text' : 'password'"
-                   id="pwd" class="form-control" formControlName="password" autocomplete="new-password" />
-            <button class="btn btn-outline-secondary toggle-visibility" type="button"
-                    (click)="pwdVisible.set(!pwdVisible())" aria-label="Mostrar/ocultar contraseña">
-              {{ pwdVisible() ? 'Ocultar' : 'Mostrar' }}
-            </button>
-          </div>
-          <div class="pwd-meter" [attr.data-level]="passwordStrength()"></div>
-          <div class="field-help" *ngIf="f.password.touched && f.password.errors?.['weak']">
-            Mínimo 8 caracteres, mayúsculas/minúsculas y números.
-          </div>
-        </div>
-      </div>
+  <div class="col-md-6 order-md-2">
+    <label for="pwd2" class="form-label">Confirmar Contraseña *</label>
+    <div class="input-group has-icon">
+      <span class="input-group-text"><i class="ico">🔒</i></span>
+      <input data-control="confirmPassword"
+             id="pwd2"
+             [type]="pwdVisible() ? 'text' : 'password'"
+             class="form-control"
+             formControlName="confirmPassword"
+             autocomplete="new-password" />
+      <button class="btn btn-outline-secondary toggle-visibility" type="button"
+              (click)="pwdVisible.set(!pwdVisible())" aria-label="Mostrar/ocultar contraseña">
+        {{ pwdVisible() ? 'Ocultar' : 'Mostrar' }}
+      </button>
+    </div>
+    <div class="field-help" *ngIf="f.confirmPassword.touched && form.hasError('mismatch')">
+      Las contraseñas no coinciden.
+    </div>
+  </div>
+</div>
 
-      <!-- Fila 5 -->
-      <div class="row g-3 mt-1">
-        <div class="col-md-6">
-          <label for="gen" class="form-label">Género</label>
-          <div class="input-group has-icon">
-            <span class="input-group-text"><i class="ico">⚧</i></span>
-            <select data-control="genero" id="gen" class="form-select" formControlName="genero">
-              <option value="">Selecciona</option>
-              <option>Femenino</option>
-              <option>Masculino</option>
-              <option>Otro</option>
-              <option>Prefiero no decirlo</option>
-            </select>
-          </div>
-        </div>
-      </div>
+<!-- Fila 5: CURP + Género (debajo) -->
+<div class="row g-3 mt-1">
+  <div class="col-md-6">
+    <label for="curp" class="form-label">CURP</label>
+    <div class="input-group has-icon">
+      <span class="input-group-text"><i class="ico">🆔</i></span>
+      <input data-control="curp" id="curp" type="text" class="form-control"
+             formControlName="curp" placeholder="AAAA001122HDFRRN09" />
+    </div>
+    <div class="field-help" *ngIf="f.curp.touched && f.curp.errors?.['curp']">
+      CURP con formato inválido.
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="gen" class="form-label">Género</label>
+    <div class="input-group has-icon">
+      <span class="input-group-text"><i class="ico">⚧</i></span>
+      <select data-control="genero" id="gen" class="form-select" formControlName="genero">
+        <option value="">Selecciona</option>
+        <option>Femenino</option>
+        <option>Masculino</option>
+        <option>Otro</option>
+        <option>Prefiero no decirlo</option>
+      </select>
+    </div>
+  </div>
+</div>
+
 
       <!-- CTA -->
       <div class="d-grid mt-4">
@@ -137,7 +160,9 @@
         </button>
       </div>
 
-      <div id="formHelp" class="visually-hidden">Los errores aparecen bajo cada campo.</div>
+      <div id="formHelp" class="visually-hidden">
+        Los errores aparecen bajo cada campo.
+      </div>
     </form>
   </div>
 </div>

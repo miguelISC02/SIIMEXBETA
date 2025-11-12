@@ -21,7 +21,8 @@ import {
 /* =======================
    Validadores personalizados
    ======================= */
-const CURP_REGEX = /^[A-Z]{4}\d{6}[HM][A-Z]{5}\d{2}$/; // simplificado (ajústalo si necesitas más estricto)
+// CURP: 4 letras + 6 dígitos (YYMMDD) + sexo (H/M) + 5 letras (incluye entidad y consonantes) + homoclave alfanum + dígito verificador
+const CURP_REGEX = /^[A-Z]{4}\d{6}[HM][A-Z]{5}[A-Z0-9]\d$/;  // simplificado y correcto
 
 function curpValidator(ctrl: AbstractControl): ValidationErrors | null {
   const v = (ctrl.value || '').toUpperCase().trim();
@@ -40,6 +41,14 @@ function strongPassword(ctrl: AbstractControl): ValidationErrors | null {
   if (!v) return null;
   const ok = v.length >= 8 && /[A-Z]/.test(v) && /[a-z]/.test(v) && /\d/.test(v);
   return ok ? null : { weak: true };
+}
+
+// Validador a nivel grupo: password === confirmPassword
+function matchPasswordsValidator(group: AbstractControl): ValidationErrors | null {
+  const pass = group.get('password')?.value;
+  const confirm = group.get('confirmPassword')?.value;
+  if (!pass || !confirm) return null;
+  return pass === confirm ? null : { mismatch: true };
 }
 
 // Mock async para “email ya registrado”
@@ -62,6 +71,7 @@ type RegistroForm = FormGroup<{
   curp: FormControl<string>;
   genero: FormControl<string>;
   password: FormControl<string>;
+  confirmPassword: FormControl<string>;
 }>;
 
 @Component({
@@ -73,7 +83,7 @@ type RegistroForm = FormGroup<{
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegistroComponent implements OnInit {
-  /* Inyección sin constructor (evita TS2729) */
+  /* Inyección sin constructor */
   private fb = inject(FormBuilder);
 
   /* Estado UI */
@@ -85,18 +95,22 @@ export class RegistroComponent implements OnInit {
   today = new Date().toISOString().slice(0, 10);
   minDate = '1900-01-01';
 
-  /* Formulario tipado + nonNullable (para usar f.nombre en template) */
-  form: RegistroForm = this.fb.nonNullable.group({
-    nombre: this.fb.nonNullable.control('', [Validators.required, Validators.maxLength(60)]),
-    apellidoPaterno: this.fb.nonNullable.control('', [Validators.required, Validators.maxLength(60)]),
-    apellidoMaterno: this.fb.nonNullable.control(''),
-    fechaNacimiento: this.fb.nonNullable.control(''),
-    correo: this.fb.nonNullable.control('', [Validators.required, Validators.email]),
-    telefono: this.fb.nonNullable.control('', [phoneValidator]),
-    curp: this.fb.nonNullable.control('', [curpValidator]),
-    genero: this.fb.nonNullable.control(''),
-    password: this.fb.nonNullable.control('', [Validators.required, strongPassword]),
-  });
+  /* Formulario tipado + nonNullable */
+  form: RegistroForm = this.fb.nonNullable.group(
+    {
+      nombre: this.fb.nonNullable.control('', [Validators.required, Validators.maxLength(60)]),
+      apellidoPaterno: this.fb.nonNullable.control('', [Validators.required, Validators.maxLength(60)]),
+      apellidoMaterno: this.fb.nonNullable.control(''),
+      fechaNacimiento: this.fb.nonNullable.control(''),
+      correo: this.fb.nonNullable.control('', [Validators.required, Validators.email]),
+      telefono: this.fb.nonNullable.control('', [phoneValidator]),
+      curp: this.fb.nonNullable.control('', [curpValidator]),
+      genero: this.fb.nonNullable.control(''),
+      password: this.fb.nonNullable.control('', [Validators.required, strongPassword]),
+      confirmPassword: this.fb.nonNullable.control('', [Validators.required]),
+    },
+    { validators: [matchPasswordsValidator] }
+  );
 
   /** Alias para usar punto en la plantilla: f.nombre, f.curp, etc. */
   readonly f = this.form.controls;
@@ -125,8 +139,9 @@ export class RegistroComponent implements OnInit {
       t = setTimeout(async () => {
         const taken = await fakeEmailCheck(v);
         this.emailTaken.set(taken);
-        if (taken) this.f.correo.setErrors({ ...(this.f.correo.errors || {}), taken: true });
-        else if (this.f.correo.hasError('taken')) {
+        if (taken) {
+          this.f.correo.setErrors({ ...(this.f.correo.errors || {}), taken: true });
+        } else if (this.f.correo.hasError('taken')) {
           const errs = { ...(this.f.correo.errors || {}) };
           delete (errs as any)['taken'];
           this.f.correo.setErrors(Object.keys(errs).length ? errs : null);
